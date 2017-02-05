@@ -74,9 +74,11 @@ ___
 
 [osX](https://www.youtube.com/watch?v=P6IlgugDoGw)   <br>  
 
-```command line
- ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
+
 ```
+ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
+```  
+
 
 위코드 입력후 터미널 재실행,  <br>  
 이후 `subl . ` 입력하면 현재 경로에서 서브라임텍스트 실행 실행처리
