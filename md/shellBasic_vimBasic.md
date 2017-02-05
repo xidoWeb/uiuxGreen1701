@@ -179,6 +179,3 @@ $ vi test_file.py
 
 
 ___
-<style>
- .point1{color:#f70; font-size:1.15em; font-weight:bold;}
-</style>
