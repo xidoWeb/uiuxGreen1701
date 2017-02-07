@@ -1,4 +1,5 @@
 # web 사용하기 앞서 익힐 다양한 기술
+
 <!--
 ## web 이란 무엇인가?
 ## web 분야에 대해...
@@ -21,8 +22,8 @@
 > 아마도 가볍고, 필요에 따라 편하게 추가 기능을 설치하고 사용할 수 있는것이 가장 좋은 장점일 것이라 판단합니다. <br>
 > 하지만 처음 접하는 이들에게는 sublimetext의 기능은 다소 생소하고 어렵다는 내용들이 일반적입니다. 이에 두가지 에디트를 소개합니다.
 
-[**brackets** 사이트바로가기](http://brackets.io/)<br>
-[**brackets** 설치방법 및 기능](https://www.youtube.com/watch?v=OwN-T7b2_o8)<br>
+[**brackets** 사이트바로가기](http://brackets.io/) <br>
+[**brackets** 설치방법 및 기능](https://www.youtube.com/watch?v=OwN-T7b2_o8) <br>
 
-[**sublimetext** 사이트 바로가기](http://sublimetext.com)<br>
-[**sublimetext** 설치법 익히기](./md/edit_install.md)<br>
+[**sublimetext** 사이트 바로가기](http://sublimetext.com) <br>
+[**sublimetext** 설치법 익히기](./md/edit_install.md) <br>
