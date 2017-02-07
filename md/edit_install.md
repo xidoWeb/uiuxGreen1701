@@ -62,28 +62,28 @@ ___
 > 브라우저를 사용하면서 좀더 나은 환경을 세팅하게 되면서 에디트의 테마를 세팅하는 경우도 있다.   
 > 개인적으로는 boxy theme를 사용하는 편이다.
 
-[boxy theme](https://packagecontrol.io/packages/Boxy%20Theme)
-[colorsublime theme](http://colorsublime.com/)
-[기타 다양한 테마](https://www.longren.io/gigantic-list-of-sublime-text-themes/)
+[boxy_theme](https://packagecontrol.io/packages/Boxy%20Theme)  <br>
+[colorsublime theme](http://colorsublime.com/)<br>
+[기타 다양한 테마](https://www.longren.io/gigantic-list-of-sublime-text-themes/)<br>
 
 
 ### terminal에서 사용하기
 아래 내용은 서브라임텍스트를 기반으로 터미널에서 실행시에 사용하는 방법을 설명해 놓았으며 기타 다를 edit에서도 사용요령은 같다. 단, atom의 경우 기본 설치후 바로 사용할 수 있다. <br>
 
-#### osX 에서 실행하기
+#### [**osX**](https://www.youtube.com/watch?v=P6IlgugDoGw) 에서 실행하기
 
-[**osX**](https://www.youtube.com/watch?v=P6IlgugDoGw)   <br>  
-  
-```  
-ln -s "/Applications/Sublime 	Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
 ```
+ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl;
+```  
 
-위코드 입력후 터미널 재실행,  <br>  
+
+위코드 입력후 터미널 재실행,  <br>
 이후 `subl . ` 입력하면 현재 경로에서 서브라임텍스트 실행 실행처리
 
-#### window 에서 실행하기
-  
-[**window**](https://www.youtube.com/watch?v=vERWpzH7PBM)
+#### [**window**](https://www.youtube.com/watch?v=vERWpzH7PBM) 에서 실행하기
+
+<a href="./downfile/sublime-cli-windows-master.zip" download="sublime-cli-windows-master.zip">file_download 윈도우 쉽게 설정하기( **downfile/sublime-cli-windows-master.zip** )</a> 
+
 
 ___
 [처음으로 돌아가기](../webReady.md)
