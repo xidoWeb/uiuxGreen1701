@@ -82,7 +82,7 @@ ___
 
 #### [**window**](https://www.youtube.com/watch?v=vERWpzH7PBM) 에서 실행하기
 
-<a href="./downfile/sublime-cli-windows-master.zip" download="sublime-cli-windows-master.zip">file_download 윈도우 쉽게 설정하기( **downfile/sublime-cli-windows-master.zip** )</a> 
+<a href="../downfile/sublime-cli-windows-master.zip" download="sublime-cli-windows-master.zip">file_download 윈도우 쉽게 설정하기( **downfile/sublime-cli-windows-master.zip** )</a> 
 
 
 ___
