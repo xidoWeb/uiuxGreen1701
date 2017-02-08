@@ -10,9 +10,64 @@ ___
 ## 웹 버전
 1. html  
     * html 4.0.1
-    * xthml 1.0
-    * html 5
-    * html 5.1
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+```
+
+___
+
+  * xthml 1.0  
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+```
+___
+  * html 5
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+```
+___
+  * html 5.1
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+```
+___
 2. css
     * css2
     * css3
@@ -29,7 +84,6 @@ ___
   * 외부 문서 불러오기
   * 테이블
   * 폼
-  * 구조화하기 2
   * 블록구조화(시멘틱하게)
   * video & audio
   * 조건부 주석
@@ -64,7 +118,7 @@ ___
   * border-radius
   * transform
   * transition
-  * animateion
+  * animation
 ___
 
 [^1]: html.md
