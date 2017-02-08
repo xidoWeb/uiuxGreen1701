@@ -1,17 +1,17 @@
 # Accessibility(웹접근성)
-> 접근성이란 "보다 많은 사람이 이용할 수 있는 보편적 접근의 정도"를 의미
+> 접근성이란 "**보다 많은 사람이 이용할 수 있는 보편적 접근의 정도**"를 의미
 > 장애인뿐만 아니라 모든 사람이 정보통신 기기나 서비스를 손쉽게 활용할 수 있게 하는 것
 ___
 월드 와이드 웹 (World Wide Web)을 창시한 **팀 버너스 리**(Tim Berners-Lee)는 웹이란 '**장애에 구애 없이 모든 사람이 손쉽게 정보를 공유할 수 있는 공간**'이라고 정의하였으며, 웹 콘텐츠를 제작할 때에는 장애에 구애됨이 없이 누구나 접근할 수 있도록 제작하여야 한다고 하였다. 이는 모든 사용자가 신체적, 환경적 조건과 관계없이 웹에 접근하여 이용할 수 있도록 보장하는 것을 뜻한다. 여기서 신체적 조건이란 일반 사용자는 물론, 장애를 가진 사람, 고령자 등을 의미하고 환경적 조건이란 다양한 기기(PC, mobile, PDA 등), OS(운영체제), 웹 브라우저 (Internet Explorer, FireFox, Safari, Chrome, Opera 등)를 의미한다.
 
 * 웹접근성의 4원칙, 13지침, 22검사
-* [WAI-ARIA]:https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA
+* [WAI-ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA)
 
 ___
 ### 웹 콘텐츠 접근성 지침(WCAG)-4원칙
 
 1. 인지성(Perceivable)
-2. 운용성(Operable) 33 
+2. 운용성(Operable) 
 3. 이해성(Understandable)  
 4. 내구성(Robust)  
 
