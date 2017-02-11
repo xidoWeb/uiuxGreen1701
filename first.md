@@ -1,4 +1,5 @@
 # 조사 및 선행학습
+
 ___
 ## basic
 * Web? app?: hibrid, native, webapp
@@ -37,11 +38,13 @@ ___
 ## html/css
 * html
 * css
+
 ___
 ### html?
 * 버전
 * 주요 코드: h, p, span, list, a, div, img, table, form
 * inline, block
+
 ___
 ### css?
 * reset.css / common.css
@@ -51,6 +54,7 @@ ___
 * position
 * font, background
 * display, visibility
+* Responsive Web
 
 ___
 ## javascript
@@ -65,6 +69,7 @@ ___
 * 속성, attribute, property
 * 인자, 인수, 매개변수
 * 이벤트
+* keydown Event
 
 ___
 ## javascript2
@@ -77,7 +82,9 @@ ___
 * ruby
 * gulp/ grunt/ webpack/ yomern/ express
 * scss/sass, less, postCss, stylus 
-* frameworks : bootstrap, materialize, susy, ejs, handlebars, jade, angularjs, react, vue
+* frameworks :
+    * html: ejs, handlebars, jade, angularjs, react, vue
+    * css: bootstrap, materialize, susy, 
 * git
 * slack, trello, evernote, cloud
 
