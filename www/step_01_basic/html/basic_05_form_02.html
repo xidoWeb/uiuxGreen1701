@@ -14,8 +14,11 @@
 	<form action="" method="get">
 		<fieldset>
 			<legend>form basic_01</legend>
-			<!-- 입력 -->
-			
+			<!-- 입력 type=" text | password " value="" -->
+			<label for="user">아이디를 입력하세요.</label>
+			<input type="text" id="user" name="user" value="" />
+			<label for="pwd">비밀번호를 입력하세요.</label>
+			<input type="password" id="pwd" name="pwd" value="" />
 			
 		</fieldset>
 		<!-- form basic_01 -->
@@ -23,11 +26,54 @@
 		<fieldset>
 			<legend>form basic_02</legend>
 			<!-- 선택 -->
+			<div class="check_box">
+				<p>평소에 즐겨듣는 음악은?</p>
+				<input type="checkbox" id="hiphop" name="music" value="Hiphop" />
+				<label for="hiphop">Hiphop</label>
+				
+				<input type="checkbox" id="balad" name="music" value="Balad" />
+				<label for="balad">Balad</label>
+				
+				<input type="checkbox" id="rnb" name="music" value="R&amp;B" />
+				<label for="rnb">R&amp;B</label>
+				
+			</div><!--// .check_box -->
+			<div class="radio_box">
+				<p>좋아하는연예인을 한사람 선택하세요.</p>
+				<input type="radio" id="people_01" name="people" value="서강준" />
+				<label for="people_01">서강준</label>
+
+				<input type="radio" id="people_02" name="people" value="박서준" />
+				<label for="people_02">박서준</label>
+				
+				<input type="radio" id="people_03" name="people" value="공유" />
+				<label for="people_03">공유</label>
+				
+				<input type="radio" id="people_04" name="people" value="조인성" />
+				<label for="people_04">조인성</label>
+				
+			</div><!--// .radio_box -->
 		</fieldset>
 		<!-- form basic_02 -->
 		
 		<fieldset>
 			<legend>form basic_03</legend>
+			<label for="ok">확인 버튼</label>
+			<input type="submit" id="ok" name="ok" value="확인">
+			
+			<label for="cancel">취소 버튼</label>
+			<input type="reset" id="cancel" name="cancel" value="취소">
+			
+			<label for="baseBtn">버튼 기능</label>
+			<input type="button" id="baseBtn" name="baseBtn" value="기본 버튼">
+			
+			<label for="imgBtn">이미지로 버튼만들기</label>
+			<input type="image" src="../img/img_btn.jpg" id="imgBtn" name="imgBtn" value="이미지 확인버튼">
+			
+			<label for="fileAdd">파일 첨부</label>
+			<input type="file" id="fileAdd" name="fileAdd" 
+			value="">
+			
 			<!-- 버튼 -->
 		</fieldset>
 		<!-- form basic_03 -->
@@ -38,7 +84,8 @@
 		<!-- form basic_04 -->
 	</form>
 	
-	
+	<h3>entity code</h3>
+	<p>&amp;  &lt;   &gt;   &copy;   &nbsp; </p>
 </body>
 </html>
 
