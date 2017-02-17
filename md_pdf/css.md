@@ -77,9 +77,84 @@ CDN(contents delivery network) 기능을 이용해야합니다!
 [bootstrap한글 사이트 바로가기](http://bootstrapk.com)
 
 
+___
+ ### 선택자
+ 1. 타입선택자(태그선택자)
+```css
+    body{}
+    html{}
+    h1{}
+    h2{}
+    p{}
+    img{}
+```
+___
+ 2. 자손 선택자: `html body{}` 모양으로 태그와 태그사이에 띄어쓰기로 선택
+ ```
+  ul a{}
+  ul li a span{}
+  ul span{}
+  ul.box span{}
+ ```
+___
+ 3. 자식 선택자: `html > body{}` 형식으로 태그와 태그사이에 &gt; 모양을 삽입하여 부모 자식의 관계를 형성
+ ```css
+  ul > li{}
+  ul > li > a{}
+  #wrap{}
+ ```
+ ___
+ 4. class선택자, id선택자: class `.` 기호를, id `#`기호를 붙여사용한다.
+```css
+ .container{}
+ .container>li{}
+ div.container{}
+ 
+ .active{background-color:#000; color:#aaa;}
+ div.active{color:#fff;}
+ p.active{color:#fa0;}
+ li.active{color:#00a;}
+  
+ div#wrap{}
+ #wrap{}
+```
+___
+5. 가상선택자: 타입이나, id/class 등의 선택된것의 기능이나 상태를 변경할때
+ -  :hover(마우스 올렸을때)
+ -  :active(마우스 누르고 있을때)
+ -  :visited(방문한 기록이 있을때 , 주로 a태그가 사용): check
+ -  :checked, :selected
+```css
+ h1{color:#c99; font-size:2em;}
+ h1:hover{color:#fff;}
+ h1:active{color:#333;}
+```
 
 ___
   ### size &amp; unit
+  
+  #### size
+  width:넓이
+  min-width:최소 넓이
+  max-width:최대 넓이
+  height:높이
+  min-height:최소 높이
+  max-height:최대 높이
+  - 조건: 최소, 최대를 사용할때에는 무조건 기본형태를 취해야한다.
+___  
+  #### 단위
+  0: 크기값이 없다.
+  none: 존재하지 않는다.
+  auto: 자동
+  1이상일경우에는 단위를 붙인다.
+  	- px: pixel을 의미
+  	- pt: point
+  	- em: 상대크기값을 나타내는 단위 <br>  (단, 박스의 크기는 절대/ 폰트의 크기는 상대)
+  	- %: percent(상대크기)
+  	- rem: 최초의 조건에 맞춰 만들어지는 상대크기
+  	- vw: 화면(view)의 가로값(width)의 크기를 기준의 단위
+  	- vh: 화면(view)의 세로값(height)의 크기를 기준의 단위
+  
 ___
   ### background
 ___
