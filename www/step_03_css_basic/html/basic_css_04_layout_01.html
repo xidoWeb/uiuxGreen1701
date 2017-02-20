@@ -25,22 +25,19 @@
 			#box>div{width: 100%;height: 100px;}
 			/* .header --------------------- */
 			.header{ background-color:#faa;}
+				h1{width: 50px; height: 60px; background-color: #dd4; 
+					float: left; margin-left:50px; margin-top: 20px;}
+				.navigation{width: 300px; height: 30px; background-color: #4dd;
+					float: right; margin-right: 50px; margin-top: 50px;}
 
 			/* .section --------------------- */
 			#box>.section{height: 300px; background-color:#fa0;}
-			.section > div{
-				width:33.333333%;
-				width:-webkit-calc(100% / 3); 
-				width:-moz-calc(100% / 3); 
-				width:-ms-calc(100% / 3); 
-				width:-o-calc(100% / 3); 
-				width:calc(100% / 3); 
-
-				height:100%; float: left;}
-				.aside{ background-color:#a3c;}
-				.article{ background-color:#2ca;}
-				.container{ background-color: #ccc;}
-
+			.section > div{	 }
+				.article{ width: 70%;	height: 50%; background-color:#2ca;
+					float: left;}
+				.container{ width: 70%; height: 50%; background-color: #ccc;float: left;}
+				.aside{ width:30%; height: 100%; background-color:#a3c; 
+					float: right; margin-top:-150px;}
 
 			/* .footer --------------------- */
 			.footer{background-color:#0af;}
@@ -54,20 +51,25 @@
 	<div id="box">
 		<div class="header">
 			<h1>box</h1>
-			<h2>header<span>more</span></h2>
+			<div class="navigation">
+				<h2>global_navigation</h2>
+			</div>
 		</div><!--// .header --> 
 
 		<div class="section">
 			<h2 class="hidden">section</h2>
-			<div class="aside">
-				<h3>aside</h3>
-			</div><!--// .aside -->
+			
 			<div class="article">
 				<h3>article</h3>
 			</div><!--// .article -->
 			<div class="container">
 				<h3>container</h3>
 			</div><!--// .container -->
+
+			<div class="aside">
+				<h3>aside</h3>
+			</div><!--// .aside -->
+
 		</div><!--// .section -->
 
 		<div class="footer">
