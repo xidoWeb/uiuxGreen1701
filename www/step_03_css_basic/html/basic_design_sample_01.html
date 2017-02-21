@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <title>css layout</title>
+  <style>
+/*    body{background-color: #cca;}*/
+    h1{width: 600px;  padding-top: 1em; text-align: center;
+      text-transform:uppercase; color:#fff; text-shadow:1px 1px 1px #333;
+      cursor:pointer; transition:all 0.5s; margin: 0 auto;}
+    h1:hover{text-shadow:-0 0 1px transparent;}
+    hr{border-bottom:3px solid #0af;}
+    p{width:600px; color:#333; border-top:1px solid #fff; margin: 0 auto;}
+    p>span{color:#057; font-size:1.3em;}
+  </style>
+</head>
+<body>
+  <h1 onmouseover="show()" onmouseout="hide()">web test layout</h1>
+  <hr>
+  <div><img src="" alt="" id="imgBox" /></div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus libero pariatur delectus ea molestias ut, laudantium exercitationem debitis eaque, commodi odio aliquam adipisci et minima dignissimos cumque, <span>blanditiis distinctio. Distinctio?</span></p>
+  
+<!--  script-->
+  <script>
+    function show(){    
+      var img = document.getElementById('imgBox');
+      img.src='../img/layout.png';
+    }
+    function hide(){
+      var img = document.getElementById('imgBox');
+      img.src="";
+    }
+    
+ //   show();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

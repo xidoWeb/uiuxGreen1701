@@ -1,5 +1,16 @@
 ___
 # html
+___
+## entity code
+특수문자를 바로 사용할수 없기때문에 그것을 코드화시켜 사용
+
+- &amp; `&amp;`
+- &copy; `&copy;`
+- &lt; `&lt;`
+- &gt; `&gt;`
+- 빈칸 `&nbsp;`
+- &quot; `&quot;`
+- &apos; `&apos;`
 
 ___
 ## 구조화하기 1
