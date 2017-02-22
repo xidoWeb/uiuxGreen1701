@@ -12,11 +12,22 @@
   <title>layout_test</title>
   <style>
     #wrap{width: 960px; height: auto; margin: 0 auto; }
-    
+/*    #header -------------------------------------------- */
     #header{width:900px; height:60px; padding:20px 30px; background-color:#adc;}
+      h1{width: 200px; height: 60px; background-color: #fff; float: left;}
+      #globalNavi{width:460px; height:20px; float:right; margin-top: 40px;}
+      #globalNavi>ul{width: 100%; height: 100%;}
+      #globalNavi>ul>li{width: 100px; height:inherit; margin-right: 20px;
+      background-color: #061; float: left; color:#fff;}
+    #globalNavi>ul>li.last_margin{margin-right: 0;}
+    
+/*    #addBanner -------------------------------------------- */
     #addBanner{width: 100%; height:420px; background-color:#faa;}
+/*    #localNavi -------------------------------------------- */
     #localNavi{width:920px; height:60px; background-color:#ccc;  padding:10px 20px;}
+/*    #contents -------------------------------------------- */
     #contents{width: 920px; height:550px; background-color:#08a; padding:20px 20px 30px; }
+/*    #footer -------------------------------------------- */
     #footer{width: 900px; height:80px; background-color:#aaa; padding:20px 30px 50px;}
   </style>
   <script></script>
@@ -24,19 +35,28 @@
 <body>
   <div id="wrap">
     <div id="header">
-      <h1>header</h1>
+      <h1>logo</h1>
+      <div id="globalNavi">
+        <h2 class="hidden">global navigation area</h2>
+        <ul>
+          <li>gnb_01</li>
+          <li>gnb_02</li>
+          <li>gnb_03</li>
+          <li class="last_margin">gnb_04</li>
+        </ul>
+      </div><!--// #globalNavi-->
     </div><!--// #header-->
     <div id="addBanner">
-      <h2>addBanner</h2>
+      <h2 class="hidden">addBanner</h2>
     </div><!--// #addBanner-->
     <div id="localNavi">
-      <h2>localNavi</h2>
+      <h2 class="hidden">localNavi</h2>
     </div><!--// #localNavi-->
     <div id="contents">
-      <h2>contents</h2>
+      <h2>issue</h2>
     </div><!--// #contents-->
     <div id="footer">
-      <h2>footer</h2>
+      <h2>logo</h2>
     </div><!--// #footer-->
   </div><!--// #wrap-->
 </body>
