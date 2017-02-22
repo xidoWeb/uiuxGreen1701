@@ -4,3 +4,5 @@
 .clearfix:after{content:" "; display: block; 
   width: 100%; clear: both;}
 .hidden{font-size: 0; color:transparent;}
+#wrap .last_margin{margin-right: 0;}
+/*.last_margin{margin-right: 0 !important;}*/
