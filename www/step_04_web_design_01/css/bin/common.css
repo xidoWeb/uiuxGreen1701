@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* common.css */
+
+.clearfix:after{content:" "; display: block; 
+  width: 100%; clear: both;}
+.hidden{font-size: 0; color:transparent;}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* reset.css */
+
+body{height: 100%;}
+html, body, div,p, pre, h1,h2,h3,h4,h5,h6
+dl,dt,dd,ul,ol,li, img, q, blockquote{margin: 0; padding: 0;
+font-size:100%; color:#333;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none; color:inherit;}
+a:hover{color:#f06; text-decoration:underline;}
+table{border-spacing:0; border-collapse:collapse;}
+img,hr,fieldset{border:none;}
