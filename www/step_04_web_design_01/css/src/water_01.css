@@ -8,6 +8,10 @@
   padding-top:18px; box-sizing:border-box;}
 #headBox>div{width:800px; float: right;}
   h1{width: 100px; height: 60px; background-color: #ccc; float: left;}
+  h1>a{width: 100%; height: 100%; display: block; 
+    background-image: url("../../img/water/kwater_logo.jpg");
+    background-repeat:no-repeat; background-position:right top;
+}
   #unb{width: 232px; height: 18px; background-color: #944; float: right;}
   #gnb{width: 795px; height: 34px; background-color: #aaa; float: right;}
 /* #add ------------------------------------------------------------------ */
