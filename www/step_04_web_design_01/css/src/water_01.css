@@ -29,22 +29,40 @@
   #unb{width: 232px; height: 18px;float: right;}
     #unb>ul{width: 100%; height: 100%; background-color: #fff;}
     #unb>ul>li{float: left; height: 100%;}
-    .unb_01{width:43px; background-color:#fa0;}
-    .unb_02{width:53px; background-color:#f73;}
-    .unb_03{width:60px; background-color:#f35;}
-    .unb_04{width:73px; background-color:#fa9;}
-    #unb>ul>li>a{height: 100%; display: block; 
+    .unb_01{width:44px; /*background-color:#fa0;*/}
+    .unb_02{width:54px; /*background-color:#f73;*/}
+    .unb_03{width:60px; /*background-color:#f35;*/}
+    .unb_04{width:74px; /*background-color:#fa9;*/}
+    #unb>ul>li>a{width:calc(100% - 4px); height: 100%; display: block; 
       background-repeat:no-repeat; background-position:center;
       text-indent:-9999px; overflow: hidden; float: left;}
-    .unb_01>a{width:39px; background-image:url("../../img/water/unb_01.jpg"); }
-    .unb_02>a{width:49px; background-image:url("../../img/water/unb_03.jpg"); }
-    .unb_03>a{width:56px; background-image:url("../../img/water/unb_04.jpg"); }
-    .unb_04>a{width:73px; background-image:url("../../img/water/unb_05.jpg"); }
+    #unb .unb_01>a{/*width:39px;*/ background-image:url("../../img/water/unb_01.jpg"); }
+    #unb .unb_02>a{/*width:49px;*/ background-image:url("../../img/water/unb_03.jpg"); }
+    #unb .unb_03>a{/*width:56px;*/ background-image:url("../../img/water/unb_04.jpg"); }
+    #unb .unb_04>a{width:73px; background-image:url("../../img/water/unb_05.jpg"); }
     
     .vertical{width:4px; height:100%; background-image:url("../../img/water/unb_02.jpg");
       background-repeat: no-repeat; background-position:center; float: right;}
 
   #gnb{width: 795px; height: 34px; background-color: #aaa; float: right;}
+  #gnb>ul{width: 100%; height: 100%;}
+  #gnb>ul>li{height: 100%; float: left; margin-right: 30px;}
+      .gnb_01{width:135px;}
+      .gnb_02{width:78px;}
+      .gnb_03{width:80px;}
+      .gnb_04{width:80px;}
+      .gnb_05{width:58px;}
+      .gnb_06{width:78px;}
+   #gnb .gnb_07{width: 106px;margin-right: 0; }
+  #gnb>ul>li>a{width: 100%; height: 100%; display: block; 
+  text-indent:-9999px; overflow: hidden; background-repeat:no-repeat; background-position: center;}
+      .gnb_01>a{background-image:url("../../img/water/main_nav_01.jpg");}
+      .gnb_02>a{background-image:url("../../img/water/main_nav_02.jpg");}
+      .gnb_03>a{background-image:url("../../img/water/main_nav_03.jpg");}
+      .gnb_04>a{background-image:url("../../img/water/main_nav_04.jpg");}
+      .gnb_05>a{background-image:url("../../img/water/main_nav_05.jpg");}
+      .gnb_06>a{background-image:url("../../img/water/main_nav_06.jpg");}
+      .gnb_07>a{background-image:url("../../img/water/main_nav_07.jpg");}
 /* #add ------------------------------------------------------------------ */
 #add{width: 100%; height:auto;}
   #addBanner{width:inherit; height: 498px; background-color: #afc;}
