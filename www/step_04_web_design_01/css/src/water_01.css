@@ -11,8 +11,39 @@
   h1>a{width: 100%; height: 100%; display: block; 
     background-image: url("../../img/water/kwater_logo.jpg");
     background-repeat:no-repeat; background-position:right top;
+    text-indent:-1000px; overflow: hidden;
 }
-  #unb{width: 232px; height: 18px; background-color: #944; float: right;}
+
+/*
+* background-color:#aaa | rgba(red, green, blue, alpha) | hsla(hue, saturation, light, alhpa);
+* background-image:url("image path"), url("more image path");
+* background-repeat:repeat | no-repeat | repeat-x | repeat-y;
+* background-position:x값 y값 |  x% y% | right top;
+* backgroung-attatchment:scroll | fixed;
+
+* overflow:hidden | auto | scroll;
+* overflow-x:hidden | auto | scroll;
+* overflow-y:hidden | auto | scroll;
+
+*/
+  #unb{width: 232px; height: 18px;float: right;}
+    #unb>ul{width: 100%; height: 100%; background-color: #fff;}
+    #unb>ul>li{float: left; height: 100%;}
+    .unb_01{width:43px; background-color:#fa0;}
+    .unb_02{width:53px; background-color:#f73;}
+    .unb_03{width:60px; background-color:#f35;}
+    .unb_04{width:73px; background-color:#fa9;}
+    #unb>ul>li>a{height: 100%; display: block; 
+      background-repeat:no-repeat; background-position:center;
+      text-indent:-9999px; overflow: hidden; float: left;}
+    .unb_01>a{width:39px; background-image:url("../../img/water/unb_01.jpg"); }
+    .unb_02>a{width:49px; background-image:url("../../img/water/unb_03.jpg"); }
+    .unb_03>a{width:56px; background-image:url("../../img/water/unb_04.jpg"); }
+    .unb_04>a{width:73px; background-image:url("../../img/water/unb_05.jpg"); }
+    
+    .vertical{width:4px; height:100%; background-image:url("../../img/water/unb_02.jpg");
+      background-repeat: no-repeat; background-position:center; float: right;}
+
   #gnb{width: 795px; height: 34px; background-color: #aaa; float: right;}
 /* #add ------------------------------------------------------------------ */
 #add{width: 100%; height:auto;}
