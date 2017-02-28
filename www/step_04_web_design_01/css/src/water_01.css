@@ -4,8 +4,12 @@
 #waterWrap{width: 960px; height:auto; margin: 0 auto;}
 /*#waterWrap > *{width: 100%;}*/
 /* #headBox ------------------------------------------------------------------ */
-#headBox{width: 100%; height: 90px; background-color:#fa0;}
-
+#headBox{width: 100%; height: 90px; background-color:#fa0; 
+  padding-top:18px; box-sizing:border-box;}
+#headBox>div{width:800px; float: right;}
+  h1{width: 100px; height: 60px; background-color: #ccc; float: left;}
+  #unb{width: 232px; height: 18px; background-color: #944; float: right;}
+  #gnb{width: 795px; height: 34px; background-color: #aaa; float: right;}
 /* #add ------------------------------------------------------------------ */
 #add{width: 100%; height:auto;}
   #addBanner{width:inherit; height: 498px; background-color: #afc;}
@@ -15,3 +19,7 @@
 
 /* #footBox ------------------------------------------------------------------ */
 #footBox{width: 100%; height: 205px; background-color:#f7f7f7;}
+
+
+
+
