@@ -21,9 +21,26 @@ body{background-color: #adadad;}
 
 /* #container ---------------------------------------------- */
 #container {width: 100%; height:auto; background-color: #fa0;}
-
- #sideBox {width: 250px; height: 710px; float: left; background-color: #777;}
+  /* --- #sideBox  --- */
+ #sideBox {width: 250px; height: 710px; float: left; background-color: #777;
+  padding:56px 53px 0 43px; box-sizing: border-box;}
+#sideBox a{ background-image: url("../../img/gcass/aside/aside.png"); 
+  background-repeat: no-repeat; width: 100%; height: 100%; display: block;}
+  h1{width: 100%; height: 104px;}
+  h1>a{background-position: 0 0; transition: all 0.5s;}
+  h1>a:hover{background-position: 0 -200px;}
+  #lnb{}
+  #lnb>ul{}
+  #lnb>ul>li{}
+  #lnb>ul>li>a{}
+  /* --- #dontent --- */
  #content {width: 730px; height: 710px; float: right; background-color: #ccc;}
 
 /* #footBox ---------------------------------------------- */
 #footBox {width: 100%; height: 110px; background-color: #fff;}
+
+
+
+
+
+
