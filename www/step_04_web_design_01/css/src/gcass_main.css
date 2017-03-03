@@ -47,10 +47,23 @@ body{background-color: #adadad;}
  #content {width: 730px; height: 710px; float: right; background-color: #ccc;}
 
 /* #footBox ---------------------------------------------- */
-#footBox {width: 100%; height: 110px; background-color: #fff;}
+#footBox {width: 100%; height: 110px; background-color: #fff;
+  border-top:1px solid #777; padding:10px 43px; box-sizing: border-box;}
 
+h2 {width:80px; height:54px; float:left; margin-right:27px; 
+  background-image:url("../../img/gcass/footer/gcass_h2.png");
+  background-repeat: no-repeat; background-position:0 0;}
 
+.info_link {width:90px; height:37px; float:left; margin-right:20px; 
+  background-color:#afc;}
+  .info_link a{}
 
+address {width:auto; height:34px; float:left;}
+  address p {font-style: normal; font-size:0.8em; letter-spacing:-0.075em;}
+  address strong {font-weight: normal;}
 
-
-
+.gcass_family {width: 300px; height: 150px; float:right; margin-top:-75px;
+  background-color:#afc;}
+  .gcass_family > ul {width: 100%; height: 130px; background-color: #aaf;}
+  .gcass_family > ul > li {width: 100%; height: 50%;}
+  .gcass_family > p {width: 100%; text-align:right; font-size:.75em;}

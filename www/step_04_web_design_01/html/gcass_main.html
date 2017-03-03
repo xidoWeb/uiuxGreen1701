@@ -13,7 +13,10 @@
   <script src="../js/jquery/jquery-ui.min.js"></script>
 <!-- 조건부주석 cc:ie6 -->
   <!--[if lte IE 9]>
-  
+    <style>
+      address p {font-size:80%; letter-spacing:-1.2px;}
+      
+    </style>
   <![endif]-->
   <title>gcass</title>
   
@@ -55,7 +58,25 @@
       
     </section><!--// #container-->
      
-      <footer id="footBox"></footer><!--// #footBox-->
+      <footer id="footBox">
+        <h2><span class="hidden">GCASS info</span></h2>
+        <div class="info_link">
+          <a href="#">location</a>
+          <a href="#">facebook</a>
+        </div>
+        <address>
+          <p>address_경기도 수원시 팔달구 매산로 3가 123-12 <strong>그린컴퓨터 아트학원</strong></p>
+          <p>&copy; GCASS. Allright reserved</p>
+        </address>
+        <aside class="gcass_family">
+          <h3 class="hidden">gcass family</h3>
+          <ul>
+            <li>family_link_01</li>
+            <li>family_link_02</li>
+          </ul>
+          <p>본페이지는 학습용으로 제작된 페이지입니다.</p>
+        </aside>
+      </footer><!--// #footBox-->
   </div>
   
   
