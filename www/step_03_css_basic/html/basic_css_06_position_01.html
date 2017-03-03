@@ -15,6 +15,13 @@
     li{width: 100px; height: 100px; float: left; border:2px solid #fa0; box-sizing: border-box; background-color: #afc; text-align: center; line-height: 100px;}
     li:nth-child(2n){background-color: #57f; border-color:#259; color:#fff;}
     
+    ul{position: relative; }
+    .basic{}
+    .static{position:static; top: 0; left: 0; z-index:-1;}
+    .fixed{position: fixed; top: 0; right:100px; z-index:-100;}
+    .absolute{position: absolute; bottom: 0; right:-50px; z-index:-150;}
+    .relative{position: relative; top:100px; left:100px; z-index:-100;}
+    .basic{}
     
   </style>
 </head>
@@ -22,12 +29,12 @@
   <h1>position</h1>
   <div class="position">
     <ul>
-      <li>basic</li>
-      <li>static</li>
-      <li>fixed</li>
-      <li>absolute</li>
-      <li>relative</li>
-      <li>basic</li>
+      <li class="basic">basic</li>
+      <li class="static">static</li>
+      <li class="fixed">fixed</li>
+      <li class="absolute">absolute</li>
+      <li class="relative">relative</li>
+      <li class="basic">basic</li>
     </ul>
   </div>
 </body>
