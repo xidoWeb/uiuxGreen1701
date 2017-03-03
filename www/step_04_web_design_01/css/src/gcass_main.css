@@ -54,16 +54,22 @@ h2 {width:80px; height:54px; float:left; margin-right:27px;
   background-image:url("../../img/gcass/footer/gcass_h2.png");
   background-repeat: no-repeat; background-position:0 0;}
 
-.info_link {width:90px; height:37px; float:left; margin-right:20px; 
-  background-color:#afc;}
-  .info_link a{}
+.info_link {width:90px; height:auto; float:left; margin-right:20px; margin-top: 7px;}
+  .info_link a{width: 100%; height:20px; display: block; text-align: center;}
+  .info_link a:hover{text-decoration: none;}
 
-address {width:auto; height:34px; float:left;}
+  .info_link a:nth-of-type(1){margin-bottom: 4px;}
+
+
+  .info_link a:nth-of-type(1):hover{border-bottom-color:#fff30d;}
+  .info_link a:nth-of-type(2){background-color: #777; color:#fff; line-height:20px;}
+  .info_link a:nth-of-type(2):hover{font-weight: bold;}
+
+address {width:auto; height:34px; margin-top:20px; float:left;}
   address p {font-style: normal; font-size:0.8em; letter-spacing:-0.075em;}
   address strong {font-weight: normal;}
 
-.gcass_family {width: 300px; height: 150px; float:right; margin-top:-75px;
-  background-color:#afc;}
+.gcass_family {width: 300px; height: 150px; float:right; margin-top:-75px;}
   .gcass_family > ul {width: 100%; height: 130px;}
   .gcass_family > ul > li {width: 100%; height: 50%;}
   .gcass_family li>a {background-image: url("../../img/gcass/footer/family_web.png");
@@ -72,7 +78,7 @@ address {width:auto; height:34px; float:left;}
     background-image: url("../../img/gcass/footer/family_web_on.png");}
   .gcass_family > ul > li:nth-child(1) > a{background-position:0 0;}
   .gcass_family > ul > li:nth-child(2) > a{background-position:0 -65px;}
-  .gcass_family > p {width: 100%; text-align:right; font-size:.75em;}
+  .gcass_family > p {width: 100%; margin-top:5px; text-align:right; font-size:.75em;}
 
 
 
