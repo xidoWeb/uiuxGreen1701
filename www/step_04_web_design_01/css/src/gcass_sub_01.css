@@ -77,13 +77,19 @@ address p:nth-of-type(2)>span:nth-of-type(2):before {content:"FAX_";}
 
 .gcass_family {width: 278px; height: 140px; float: right;  margin-top: -55px;}
 .gcass_family ul {width:100%; height:140px;}
-.gcass_family ul >li{width: 100%; height: 33.333%; background-color: #777;}
-.foot_nav_01 {}
+.gcass_family ul >li{width: 100%; height: 33.333%; background-color: #777;
+  line-height:50px; color:#fff; text-align:right;}
+.gcass_family a{position: relative;}
+.gcass_family a:before{ position: relative; position: absolute; top: 0; left:10px; color:#fff; letter-spacing: -.025em;}
+.foot_nav_01 a:before{content:"http://greenart.co.kr"; }
 .foot_nav_01 a {width: 205px; float: right; background-color:#fc0;}
-.foot_nav_02 {}
+.foot_nav_01 a:hover {background-color:#777;}
+.foot_nav_02 a:before{content:"http://cafe.naver.com/graba"; }
 .foot_nav_02 a {width: 205px; float: right; background-color:#fc0;}
-.foot_nav_03 {}
-.foot_nav_03 a {width: 205px; float: right; background-color:#ccc;}
+.foot_nav_02 a:hover {background-color:#777;}
+.foot_nav_03 a:before{content:"https://webportfolio.github.io";}
+.foot_nav_03 a {width: 205px; float: right; background-color:#999;}
+.foot_nav_03 a:hover {background-color:#777;}
 .gcass_family p {width: 100%; height:20px; font-size: 0.8em; letter-spacing:-.025em; text-align: right; margin-top: 4px;}
 
 
