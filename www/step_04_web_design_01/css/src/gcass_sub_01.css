@@ -22,9 +22,45 @@
 
 /* #container ------------------------ */
 #container {width: 100%; height: auto; background-image: url("../../img/gcass/sub/bg01_patt.jpg");}
-  #sideBox {width: 250px; height:auto; min-height:710px; float:left;
-  background-color: transparent; transition:all 0.3s;}
+  #sideBox {width: 240px; height:auto; min-height:710px; float:left;
+  background-color: transparent; transition:all 0.3s; 
+  padding:54px 42px 0 43px; box-sizing: border-box;}
+  #sideBox a{background-image: url("../../img/gcass/sub/side_btn.png");}
+  h1{width:100%; height:104px; margin-bottom: 42px;}
+/*  h1>a:hover{background-position: right 0;}*/
+  
+  #lnb{width: 100%; height:auto;}
+  #lnb>ul{width: 100%; height:auto;}
+  #lnb>ul>li{width: 100%; height:37px; margin-bottom:25px;}
+
+  #lnb>ul>li:nth-child(5){margin-bottom:9px;}
+  #lnb>ul>li:nth-child(6){margin-bottom:0; height:111px;}  
+
+  #lnb>ul>li:nth-child(1)>a{background-position:0 -145px;}
+  #lnb>ul>li:nth-child(2)>a{background-position:0 -207px;}
+  #lnb>ul>li:nth-child(3)>a{background-position:0 -269px;}
+  #lnb>ul>li:nth-child(4)>a{background-position:0 -331px;}
+  #lnb>ul>li:nth-child(5)>a{background-position:0 -393px;}
+  #lnb>ul>li:nth-child(6)>a{background-position:0 bottom;} 
+
+  #lnb>ul>li:nth-child(1)>a:hover{background-position:right -145px;}
+  #lnb>ul>li:nth-child(2)>a:hover{background-position:right -207px;}
+  #lnb>ul>li:nth-child(3)>a:hover{background-position:right -269px;}
+  #lnb>ul>li:nth-child(4)>a:hover{background-position:right -331px;}
+  #lnb>ul>li:nth-child(5)>a:hover{background-position:right -393px;}
+  #lnb>ul>li:nth-child(6)>a:hover{background-position:right bottom;}
+
+
+
+
+
+
+
   #sideBox:hover {background-color: #777;}
   #content {width:730px; height:auto; min-height:710px; float:left;}
 /* #footBox ------------------------ */
 #footBox {width: 100%; height: 130px; background-color: #afa;}
+
+
+
+
