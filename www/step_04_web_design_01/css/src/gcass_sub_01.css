@@ -4,6 +4,22 @@
 #wrap{width: 980px; height: auto; margin: 0 auto;}
 /* #headBox ------------------------ */
 #headBox {width: 100%; height: 30px; background-color: #888;}
+#headBox>ul{width:520px; height:inherit; float: right;}
+#headBox>ul>li{width:90px; height: inherit; float: left;}
+#headBox>ul>li:last-child{width:250px;}
+#headBox>ul>li>a{background-image: url("../../img/gcass/sub/top_nav.jpg");
+  transition:all 0.3s ease;}
+ 
+  .gnb_01>a{background-position:-460px top;}
+  .gnb_02>a{background-position:-550px top;}
+  .gnb_03>a{background-position:-640px top;}
+  .gnb_04>a{background-position:right top;}
+  .gnb_01>a:hover{background-position:-460px bottom;}
+  .gnb_02>a:hover{background-position:-550px bottom;}
+  .gnb_03>a:hover{background-position:-640px bottom;}
+  .gnb_04>a:hover{background-position:right bottom;}
+
+
 /* #container ------------------------ */
 #container {width: 100%; height: auto; background-image: url("../../img/gcass/sub/bg01_patt.jpg");}
   #sideBox {width: 250px; height:auto; min-height:710px; float:left;
