@@ -43,8 +43,15 @@ body{background-color: #adadad;}
     .lnb_04>a{background-position:0 -331px;}
     .lnb_05>a{background-position:0 -393px;}
     .lnb_06>a{background-position:0 bottom;}
-  /* --- #dontent --- */
+  /* --- #content --- */
  #content {width: 730px; height: 710px; float: right; background-color: #ccc;}
+.pattern{width:100%; height:50px; background-image:url("../../img/gcass/content/pattern_bg.png");}
+.com{width: 327px; height: 520px; background-image:url("../../img/gcass/content/pc_img.png");
+  background-repeat:no-repeat; background-position:center;}
+.com > a{background-image:none; background-repeat: repeat; background-position:center;}
+.com:hover > a{background-image:url("../../img/gcass/content/pattern_bg.png");}
+
+
 
 /* #footBox ---------------------------------------------- */
 #footBox {width: 100%; height: 110px; background-color: #fff;

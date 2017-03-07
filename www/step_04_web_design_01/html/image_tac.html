@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" href="../css/bin/reset.css">
+   <link rel="stylesheet" href="../css/bin/base.css">
+  <title>Document</title>
+  <style>
+    h1{width:100%; height: 2em; background-color: #555; color:#fff; text-align:center;
+      font-size:1.5em; border-bottom:2px solid #fa0; margin-bottom:0.5em;}
+    #imageTag{width:960px; height:auto; margin:0 auto; background-color:#dfdfdf;}
+    #imageTag:after{content:" "; display:block; clear:both;}
+    .img_box{width:200px; height:250px; margin:1em; float:left; background-color:#aaf;}
+    .img_box>a{width:100%; height:100%; display:block; position:relative;
+      overflow: hidden;}
+/*    .img_box>a:hover{background-image:linear-gradient(#f06, #0af);}*/
+    .img_box span{width:100%; height:50%; padding:0.3em; box-sizing: border-box; background-color:rgba(200, 50, 10, 0.7); color:#fff; font-weight:bold; position:absolute; bottom:-50%; left:0; transition:all 0.4s;}
+    .img_box a:hover span{bottom:0;}
+  </style>
+</head>
+<body>
+  <h1>이미지 태그표현처리</h1>
+  <header id="imageTag">
+    <div class="img_box box_01"><a href="#"><span>이미지 내용설명1</span></a></div>
+    <div class="img_box box_02"><a href="#"><span>이미지 내용설명2</span></a></div>
+    <div class="img_box box_03"><a href="#"><span>이미지 내용설명3</span></a></div>
+    <div class="img_box box_04"><a href="#"><span>이미지 내용설명4</span></a></div>
+  </header>
+  
+</body>
+</html>
+
+
+
+
