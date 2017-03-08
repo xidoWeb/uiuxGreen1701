@@ -55,27 +55,46 @@
   #content h2{width:204px; height:100%; float: right; font-size:2rem; color:#fff;}
   #content h3{width:260px; height:100%; float: left; font-size:1.5rem; color:#ddd;
     font-weight: normal; padding-top:0.3em;}
-    #curri{width: 100%; height: auto; margin-top: 45px;}
+    #curri{width: 100%; height:600px; float:left; margin-top: 45px;}
     #curri>dl{width: 100%; height:535px; position:relative;}
-    #curri>dl>dt{width:30%; height:200px; color:#fff; position:absolute; top:0;  
-                 background-color:#fa0;}
-       #curri>dl>dt:nth-of-type(1){left:0;}         
-       #curri>dl>dt:nth-of-type(2){left:50%; margin-left:-15%;}         
-       #curri>dl>dt:nth-of-type(3){right:0;}         
-    #curri>dl>dd{width:30%; height:auto; color:#fff; position:absolute; bottom:0;
-                 background-color:#a0f; text-align: center;}
+
+    #curri>dl>dt{width:200px; height:336px; color:#fff; position:absolute; 
+              border-radius:20px; cursor:help;
+              box-shadow:0.5em 0.5em 0.5em rgba(30,30,30,0.8); transition: all 0.3s ease;
+              background-image:url("../../img/gcass/sub/mouse.jpg"); background-repeat:no-repeat; }
+
+      #curri>dl>dt:nth-of-type(1){left:0; top:1.5em; background-position:left -1.5em;}         
+      #curri>dl>dt:nth-of-type(2){left:50%; margin-left:-15%; top:0; background-position:center top;}       
+      #curri>dl>dt:nth-of-type(3){right:0; top:1.5em; background-position:right -1.5em;}    
+
+      #curri>dl>dt:hover{transform:translateY(-2em);  }
+      #curri dt>i{width:6em; height:2.5em; background-color:#fff; font-style:normal; 
+          display:block; color:#05f; position: absolute; top: 20%; left: 50%; margin-left:-4em;
+          padding:1em; border-radius:0.3em; transition:all 0.3s; opacity: 0;}
+
+      #curri dt:hover > i{opacity: 1;}  
+
+      #curri dt span{  width:330px; height:1em; 
+        color:#fff30d; font-size: 2.2em; 
+        text-transform:uppercase; display: block; letter-spacing:-0.025em; word-spacing:-0.025em; 
+        text-shadow:0.02em 0.02em 0.02em rgba(30,30,30,0.8);
+        transform:rotate(-90deg) translateX(-4em);}
+
+    #curri>dl>dd{width:200px; height:auto; color:#fff; 
+                 position:absolute; bottom:0; text-align: center;}
        #curri>dl>dd a{color:#fff;}
        #curri>dl>dd:nth-of-type(1){left:0;}
        #curri>dl>dd:nth-of-type(2){left:50%; margin-left:-15%;}
        #curri>dl>dd:nth-of-type(3){right:0;}
        
        #curri ul{width: 100%; height: auto; border:2px solid #fff; border-top:0; border-bottom:0;
-          box-sizing: border-box; padding:2em 0;}
+          box-sizing: border-box; padding:2.5em 0;}
        #curri li{width: 100%; height: auto; margin-bottom:0.3rem;}
 
 /* #footBox ------------------------ */
 
-#footBox{width: 100%; height: 130px; background-color: #fff;  padding:12px 43px; box-sizing: border-box;}
+#footBox{width: 100%; height: 130px; background-color: #fff;  padding:12px 43px; 
+  box-sizing: border-box;}
 #footBox>h2 {width:85px; height: 60px; float: left; margin-right:18px;
   background-image: url("../../img/gcass/sub/foot_image.png"); background-repeat: no-repeat;}
 
