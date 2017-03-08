@@ -22,7 +22,7 @@ input[type="button"],
 input[type="reset"], button{border:0; background-color:#777; color:#fff;}
 
 /* html5 */
-header, nav, aside, article, section, footer, main, figure{display: block;}
+header, nav, aside, article, section, footer, main, figure, hgroup{display: block;}
 
 
 

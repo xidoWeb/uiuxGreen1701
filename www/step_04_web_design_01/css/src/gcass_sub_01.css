@@ -49,8 +49,30 @@
   #lnb>ul>li:nth-child(5)>a:hover{background-position:right -393px;}
   #lnb>ul>li:nth-child(6)>a:hover{background-position:right bottom;}
 
+  #content{width:730px; height:auto;float:left; padding:60px 48px 20px 30px;
+    box-sizing: border-box;}
+  #content>hgroup{width:470px; height:44px; float:right;}
+  #content h2{width:204px; height:100%; float: right; font-size:2rem; color:#fff;}
+  #content h3{width:260px; height:100%; float: left; font-size:1.5rem; color:#ddd;
+    font-weight: normal; padding-top:0.3em;}
+    #curri{width: 100%; height: auto; margin-top: 45px;}
+    #curri>dl{width: 100%; height:535px; position:relative;}
+    #curri>dl>dt{width:30%; height:200px; color:#fff; position:absolute; top:0;  
+                 background-color:#fa0;}
+       #curri>dl>dt:nth-of-type(1){left:0;}         
+       #curri>dl>dt:nth-of-type(2){left:50%; margin-left:-15%;}         
+       #curri>dl>dt:nth-of-type(3){right:0;}         
+    #curri>dl>dd{width:30%; height:auto; color:#fff; position:absolute; bottom:0;
+                 background-color:#a0f; text-align: center;}
+       #curri>dl>dd a{color:#fff;}
+       #curri>dl>dd:nth-of-type(1){left:0;}
+       #curri>dl>dd:nth-of-type(2){left:50%; margin-left:-15%;}
+       #curri>dl>dd:nth-of-type(3){right:0;}
+       
+       #curri ul{width: 100%; height: auto; border:2px solid #fff; border-top:0; border-bottom:0;
+          box-sizing: border-box; padding:2em 0;}
+       #curri li{width: 100%; height: auto; margin-bottom:0.3rem;}
 
-  #content{width:730px; height:auto;float:left;}
 /* #footBox ------------------------ */
 
 #footBox{width: 100%; height: 130px; background-color: #fff;  padding:12px 43px; box-sizing: border-box;}
@@ -78,8 +100,8 @@ address p:nth-of-type(2)>span:nth-of-type(2):before {content:"FAX_";}
 .gcass_family {width: 278px; height: 140px; float: right;  margin-top: -55px;}
 .gcass_family ul {width:100%; height:140px;}
 .gcass_family ul >li{width: 100%; height: 33.333%; background-color: #777;
-  line-height:50px; color:#fff; text-align:right;}
-.gcass_family a{position: relative;}
+  line-height:50px; color:#fff; text-align:right; font-size: .8em;}
+.gcass_family a{position: relative; font-size: 1.2em;}
 .gcass_family a:before{ position: relative; position: absolute; top: 0; left:10px; color:#fff; letter-spacing: -.025em;}
 .foot_nav_01 a:before{content:"http://greenart.co.kr"; }
 .foot_nav_01 a {width: 205px; float: right; background-color:#fc0;}
