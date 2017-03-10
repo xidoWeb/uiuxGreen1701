@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* reset.css */
+
+html, body{height: 100%;}
+html, body, h1,h2,h3,h4,h5,h6,
+p,pre,form,fieldset,legend,
+ul,ol,li,dl,dt,dd,div, img{
+  margin: 0; padding: 0; border:0;
+  font-family:"myriad pro", arial, nanumGothic, dotum, sans-serif;
+  font-size:100%; line-height: 1.2; color:#333; 
+/*  font: italic bold 100%/1.2 "myriad pro", arial, dotum, sans-serif ; */
+}
+
+table, th, td{border-spacing:0; border-collapse:collapse;}
+ul,ol,li{list-style:none;}
+a{text-decoration:none; color:inherit;}
+a:hover{color:#f06; text-decoration:underline;}
+
+textarea,input{border:1px solid #333; box-sizing:border-box;}
+input[type="submit"], 
+input[type="button"], 
+input[type="reset"], button{border:0; background-color:#777; color:#fff;}
+
+/* html5 */
+header, nav, aside, article, section, footer, main, figure{display: block;}
+
+
+
+
+
+
+
+
+
+
+
