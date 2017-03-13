@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="word, word, word" />
+  <meta name="description" content="paragraph" />
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+<!-- 조건부주석 cc:ie6 -->
+  <!--[if lte IE 9]>
+  
+  <![endif]-->
+  <title>html5</title>
+  <style>
+    div{margin: 3em auto;}
+    button{padding:2em; font-size:1.5em; font-weight:bold; color:#fff; cursor: pointer;}
+    #play{background-color: #f03;}
+    #stop{background-color: #181818;}
+  </style>
+</head>
+<body>
+  <div>
+   <button type="button" id="play">재생</button>
+   <button type="button" id="stop">멈춤</button>
+  </div>
+ 
+  <audio controls id="music">
+    <source src="../multi/aoa_100_second.ogg" type="audio/ogg" />
+    <source src="../multi/aoa_100_second.mp3" type="audio/mp3" />
+    <p>현재 브라우저에서는 오디오재생이 지원하지 않습니다 
+      <a href="http://google.com/chrome">크롬브라우저</a>
+      에서 사용하시길 권합니다.
+    </p>
+  </audio>
+<!-- jquery-->
+  <script>
+  (function($){ 
+    
+    $('#play').on('click', function(){
+      $('#music')[0].play();
+    });
+// ---------------------------------------------------------------
+    $('#stop').on('click', function(){
+      $('#music')[0].pause();
+    });
+    
+  })(this.jQuery);  // IIFE
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
