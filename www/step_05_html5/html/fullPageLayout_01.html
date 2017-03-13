@@ -28,8 +28,10 @@
      <nav id="gnb">
         <!-- menu:bars   close: fa-times    -->
       <h2>
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <span class="hidden">global navigation</span>
+        <button type="button">
+         <i class="fa fa-bars" aria-hidden="true"></i>
+         <span class="hidden">global navigation</span>
+        </button>
       </h2>
        <ul>
          <li><a href="#">link_01</a></li>
@@ -41,6 +43,28 @@
      </nav><!--// #gnb-->
       
     </header><!--// #headBox-->
+    
+    <article id="multi">
+     <div id="playButton">
+       <button type="button" id="play" class="btn">
+         <i class="fa fa-play" aria-hidden="true"></i>
+         <span class="hidden">재생</span>
+       </button>
+       <button type="button" id="stop">
+         <i class="fa fa-pause" aria-hidden="true"></i>
+         <span class="hidden">멈춤</span>
+       </button>
+      </div>
+      <video id="movie" autoplay muted loop>
+        <source 
+          src="../multi/Affinity_Designer_1.5_Overview.webm" 
+          type="video/webm">
+        <source 
+          src="../multi/Affinity_Designer_1.5_Overview.mp4" 
+          type="video/mp4">
+      </video>
+      
+    </article>
   </div><!--// #wrap-->
   
   
@@ -49,8 +73,54 @@
 <!-- jquery-->
   <script>
   (function($){ 
+    var gnb_i = $('#gnb>h2 i');
+    var gnb_list = $('#gnb>ul');
+    var play = $('#play');
+    var movie = $('#movie')[0];
+    var stop = $('#stop');
+    
+    gnb_list.hide();
+    
+    gnb_i.on('click', menuSlide);
+    
+   function menuSlide(){
+  //     gnb_i.attr('class', 'fa fa-times');
+  //     $('#gnb>ul').stop().slideToggle();
 
+     var gnb_attr = gnb_i.attr('class');
+      if(gnb_attr == 'fa fa-bars'){
+        gnb_i.attr('class', 'fa fa-times');
+        gnb_list.stop().slideDown();
+         movie.pause();
+      } else {
+        gnb_i.attr('class', 'fa fa-bars');
+        gnb_list.stop().slideUp();
+        movie.play();
+      }          
+    } // menuSlide();
+ // -----------------------------------------------------------------
+   
+    
+    play.on('click', function(){
+      movie.play();
+      play.removeClass('btn');
+      stop.addClass('btn');  
+    });
+    
+    $('#stop').on('click', function(){
+      movie.pause();
+      stop.removeClass('btn');
+      play.addClass('btn');
+    });
   })(this.jQuery);  // jQuery
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
