@@ -48,18 +48,21 @@
 <!-- jquery-->
   <script>
   (function($){ 
+    var play = $('#play');
+    var music = $('#music')[0];
+    var stop = $('#stop');
     
-    $('#play').on('click', function(){
-      $('#music')[0].play();
-      $('#play').removeClass('btn');
-      $('#stop').addClass('btn');
-      
+    play.on('click', function(){
+      music.play();
+      play.removeClass('btn');
+      stop.addClass('btn');  
     });
+    
 // ---------------------------------------------------------------
     $('#stop').on('click', function(){
-      $('#music')[0].pause();
-      $('#stop').removeClass('btn');
-      $('#play').addClass('btn');
+      music.pause();
+      stop.removeClass('btn');
+      play.addClass('btn');
     });
     
   })(this.jQuery);  // IIFE
