@@ -8,22 +8,49 @@
   <meta name="description" content="paragraph" />
   <link rel="stylesheet" href="../css/bin/reset.css">
   <link rel="stylesheet" href="../css/bin/base.css">
+  <link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/src/fullpage_01.css">
   <script src="../js/jquery/jquery-3.1.1.min.js"></script>
   <script src="../js/jquery/jquery-ui.min.js"></script>
 <!-- 조건부주석 cc:ie6 -->
   <!--[if lte IE 9]>
   
   <![endif]-->
-  <title>html5</title>
+  <title>fullpage</title>
   
 </head>
 <body>
+  <div id="wrap">
+<!--    header#headBox>h1>a[#]>span{myFullWeb}-->
+    <header id="headBox">
+      <h1><a href="#"><span>myfullWeb</span></a></h1>
+<!--      nav#gnb>ul>li*5>a[#]{link_$$}-->
+     <nav id="gnb">
+        <!-- menu:bars   close: fa-times    -->
+      <h2>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span class="hidden">global navigation</span>
+      </h2>
+       <ul>
+         <li><a href="#">link_01</a></li>
+         <li><a href="#">link_02</a></li>
+         <li><a href="#">link_03</a></li>
+         <li><a href="#">link_04</a></li>
+         <li><a href="#">link_05</a></li>
+       </ul>
+     </nav><!--// #gnb-->
+      
+    </header><!--// #headBox-->
+  </div><!--// #wrap-->
+  
+  
+  
   
 <!-- jquery-->
   <script>
   (function($){ 
 
-  })(this.jQuery);  // IIFE
+  })(this.jQuery);  // jQuery
   </script>
 </body>
 </html>
