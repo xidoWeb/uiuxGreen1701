@@ -16,11 +16,18 @@
   <![endif]-->
   <title>html5</title>
   <style>
-    div{width: 100px; height: 100px; display: inline-block;}
-    #red{background-color:#f77;}
-    #blue{background-color:#77f;}
-    #yellow{background-color:#fa7;}
-    #green{background-color:#7f7;}
+/* 일부 데이터 jQuery 사용 */
+/*
+    div{width: 100px; height: 100px; display: inline-block; border-radius:5px;
+      background-color: #f06; text-align: center; line-height: 100px; color:#fff;
+      font-size:1.5em; font-weight: bold; margin:10px;}
+*/
+
+/*
+   #red{width:100px !important; height:100px  !important; 
+     background-color:#03f  !important;}  
+*/
+    
   </style>
 </head>
 <body>
@@ -33,20 +40,29 @@
 <!-- jquery-->
   <script>
   (function($){ 
+//   div{width: 100px; height: 100px; display: inline-block; border-radius:5px;
+//      background-color: #f06; text-align: center; line-height: 100px; color:#fff;
+//      font-size:1.5em; font-weight: bold; margin:10px;}
     
-    var div = $('div');
+    // 무엇을 . 어떻게
+    var h = 300;
+    var fs = (h / 100) * 1.5;
+//    console.log(fs);
+    $('div').css({width: h + 'px', 
+                  height: h, 
+                  display: 'inline-block', 
+                  borderRadius:5 + 'px',
+                  backgroundColor: '#f06', 
+                  textAlign: 'center', 
+                  lineHeight: h + 'px', 
+                  color:'#fff',
+                  fontSize: fs + 'em', 
+                  fontWeight: 'bold', 
+                  margin:10 + 'px',
+                 });
+   
     
-//    div.on('mouseenter', function(){ 
-//        $(this).animate({ height : '+=50px' });
-//    });
-//    
-//    div.on('mouseleave', function(){ 
-//      $(this).animate({ height : '-=50px' });
-//    });
-//    
-    div.on('click', function(){ 
-      $(this).slideUp();
-    });
+    
     
   })(this.jQuery);  // jquery
   </script>
