@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="word, word, word" />
+  <meta name="description" content="paragraph" />
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+<!-- 조건부주석 cc:ie6 -->
+  <!--[if lte IE 9]>
+  
+  <![endif]-->
+  <title>html5</title>
+  <style>
+    div{width: 100px; height: 100px; display: inline-block;}
+    #red{background-color:#f77;}
+    #blue{background-color:#77f;}
+    #yellow{background-color:#fa7;}
+    #green{background-color:#7f7;}
+  </style>
+</head>
+<body>
+  <div id="red">red</div>
+  <div id="blue">blue</div>
+  <div id="yellow">yellow</div>
+  <div id="green">green</div>
+
+  
+<!-- jquery-->
+  <script>
+  (function($){ 
+    
+    var div = $('div');
+    
+//    div.on('mouseenter', function(){ 
+//        $(this).animate({ height : '+=50px' });
+//    });
+//    
+//    div.on('mouseleave', function(){ 
+//      $(this).animate({ height : '-=50px' });
+//    });
+//    
+    div.on('click', function(){ 
+      $(this).slideUp();
+    });
+    
+  })(this.jQuery);  // jquery
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
