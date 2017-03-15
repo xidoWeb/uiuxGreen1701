@@ -22,7 +22,7 @@
       cursor: pointer; }
     button:focus{outline: 3px solid #fa0;}
     dd{width: 100%; height: auto; padding:1rem; box-sizing: border-box; color:#39f;
-      display: none;}
+      /*display: none;*/}
   </style>
 </head>
 <body>
@@ -49,9 +49,14 @@
 <!-- jquery-->
   <script>
   (function($){ 
+    $('dd').hide();
+    var dd_btn = $('dd');
+    dd_btn.first().show();
+//    
     $('dt').on('click',function(){
-      var $this = $(this);
-        $this.next().stop().slideToggle(300);
+      var $this = $(this);      
+      dd_btn.slideUp();
+      $this.next('dd').stop().slideToggle(300);
     });
   })(this.jQuery);  // jquery
   </script>
