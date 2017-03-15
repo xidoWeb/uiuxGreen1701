@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css" />
+  <link rel="stylesheet" href="../css/bin/base.css" />
+  <script src="../js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>jquery</title>
+  <style>
+    #btn{width: 100%; background-color: #077; color:#fff; padding:1em; cursor: pointer; box-sizing: border-box;}
+    #btn:hover{background-color: #770;}
+    
+    .view{width: 100%; height: auto; padding: 2em; background-color: #ccc;
+      box-sizing:border-box;}
+    .view>h2{color:#60f; border-bottom:1px solid #fff; margin-bottom:1em;}
+    .view>p{color:#03f; height:auto;}
+    
+    
+/*
+    .view>p{color:#03f; height:10em; transition:all 0.5s; }
+    #btn:hover + .view>p{height:0; overflow-y:hidden;}
+*/
+  </style>
+</head>
+<body>
+ <button id="btn" type="button">클릭하세요.</button>
+
+ <div class="view">
+   <h2>menu 보이거나 사라지게하기</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, impedit fuga! Quo aperiam porro qui tenetur, obcaecati, quod officia odio distinctio fuga neque repellendus voluptatibus, nihil maiores blanditiis dolore. Vitae ratione incidunt ad quae rem, magnam distinctio molestiae aspernatur est voluptate id architecto tempora quos nemo, perspiciatis dolores vel ipsum neque pariatur illum enim. Aliquam, reiciendis? Voluptatibus, qui ipsa modi magni, dignissimos, dicta fugiat laborum adipisci, itaque autem tempora. Tempora unde adipisci dolorem odio fugit laudantium nihil numquam ratione molestias quidem culpa voluptas dolorum perspiciatis illum ipsum minus rerum ut fuga facilis optio libero nemo, iste deserunt, quisquam id. Provident sint quibusdam aperiam maiores cum debitis repellat recusandae dolore mollitia, reprehenderit ex cumque. Vero fugit ducimus nihil magnam deleniti reprehenderit facere dolore, maxime consectetur, tempore id. Vitae soluta et iusto expedita tempore voluptate iure dolores odit ex ipsam dicta autem voluptatem architecto saepe, quibusdam nisi optio, officiis nobis ducimus repellendus maxime. Quod ex quo totam esse consequuntur, impedit explicabo, distinctio iste, ut sapiente aspernatur illum nemo! Eos veritatis architecto voluptatem consequatur ipsum totam esse ipsa odio suscipit iure, rerum ab voluptates cumque quaerat, culpa tempore, praesentium voluptate repellendus. Animi fugiat debitis recusandae vel sint ea natus ratione minima. Iure, officia.</p>
+ </div>
+<!--  jquery -->
+<script>
+// var btn = document.getElementById('div1');
+//  
+//  if(btn.attachEvent){
+//     btn.attachEvent('click', funciton(){
+//      alert('IE 클릭');             
+//     });  
+//  }else{
+//    btn.addEventListener('click', function(){
+//       alert('클릭');
+//     });
+//  }
+     
+  (function($){
+    // $('선택자').on('이벤트', function(){ 작용 });
+    
+    $('#btn').on('click', function(){
+       $('.view>p').stop().slideToggle();
+    });
+  })(this.jQuery);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
