@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="word, word, word" />
+  <meta name="description" content="paragraph" />
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>html5</title>
+  <style>
+    h1{font-size: 2rem; color:#777; border-bottom:0.025rem solid #a0f; 
+      margin-bottom: 1em; box-sizing:border-box; padding:2rem; padding-bottom: 0;}
+    
+    dl{width:500px; height:auto; background-color:#dfdfdf; padding: 0.3rem;}
+    dt{width:100%; height:2rem; background-color:#333; color:#fff; line-height: 2rem;
+      border-top: 1px solid  #ddd;}
+    dt>button{width: 100%; height: 100%; background-color:transparent;
+      cursor: pointer; }
+    button:focus{outline: 3px solid #fa0;}
+    dd{width: 100%; height: auto; padding:1rem; box-sizing: border-box; color:#39f;
+      display: none;}
+  </style>
+</head>
+<body>
+  <h1>menu 만들기</h1>
+  <dl>
+    <dt><button type="button">메뉴1</button></dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴2</button></dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate unde at nobis fugit, totam quam illum autem mollitia modi consectetur!</dd>
+    <dt><button type="button">메뉴3</button></dt>
+    <dd>Lorem adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴4</button></dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quo fuga accusamus eveniet, magnam porro praesentium ab, explicabo cupiditate accusantium doloremque harum quisquam minus autem repellat numquam a voluptatem repudiandae. ipsum dolor sit ame, consectetur adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴5</button></dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cupiditate sapiente, similique et. Vitae at, distinctio quisquam, quasi ab quia dicta odit facilis corporis ratione molestias id hic culpa! Quod, magnam labore eveniet repellat voluptatum porro repellendus. Eaque, quasi, necessitatibus. ipsum dolor sit amet, consectetur adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴6</button></dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas a, est, dicta cumque optio ipsam voluptate reprehenderit delectus. Culpa ratione suscipit, doloremque maxime voluptates. Voluptatem! ipsum dolor sit amet, consectetur adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴7</button></dt>
+    <dd>Lorem ipsum dolor. ipsum dolor sit amet, consectetur adipisicing elit. Animi, vel?</dd>
+    <dt><button type="button">메뉴8</button></dt>
+    <dd>Lorem. ipsum dolor sit amet, consectetur adipisicing elit. Animi, vel?</dd>
+  </dl>
+
+<!-- jquery-->
+  <script>
+  (function($){ 
+    $('dt').on('click',function(){
+      var $this = $(this);
+        $this.next().stop().slideToggle(300);
+    });
+  })(this.jQuery);  // jquery
+  </script>
+</body>
+</html>
+
+
+
+
+
+
