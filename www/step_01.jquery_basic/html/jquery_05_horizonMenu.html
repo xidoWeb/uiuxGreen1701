@@ -22,6 +22,8 @@
     #headBox>dl>dt:hover{background-color: #f33;}
     #headBox>dl>dd{width:calc(100% - 100px); height: 100%; background-color:#dfdfdf; float:left; overflow: hidden; /*transition: all 0.3s;*/}
     #headBox>dl>dd:hover{background-color: #77f777;}
+    #headBox>dl>dd.ddWidth{width:0;}
+    
 /*    #headBox dt:hover + dd{width:0; }*/
   </style>
 </head>
@@ -40,10 +42,13 @@
   <script>
   (function($){ 
     var headbtn = $('#headBox').children('dl').children('dt');
+    var headDd = headbtn.next('dd');    
     
-    headbtn.on('click',function(){
-      headbtn.next('dd').animate({'width':0},300);
+    headbtn.on('click', function(){
+      headDd.toggleClass('ddWidth',300);
     });
+    
+   
   })(this.jQuery);  // jquery
   </script>
 </body>
