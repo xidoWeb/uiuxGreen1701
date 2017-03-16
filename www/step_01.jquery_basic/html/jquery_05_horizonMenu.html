@@ -16,13 +16,17 @@
     h1{width: 100%; height: 3em; box-sizing:border-box; 
       padding:1em; padding-bottom:0.3em; border-bottom:1px solid #333;}
     #headBox{width: 100%; height:calc(100% - 3em); box-sizing: border-box; 
-      padding:1em; background-color: #ccc;}
-    #headBox>dl{width: 100%; height: 100%; background-color:#cca;}
-    #headBox>dl>dt{width:100px; height: 100%; background-color: #4ff; color:#fff; float:left;}
+      padding:1em;/* background-color: #ccc;*/}
+    #headBox>dl{width: 100%; height: 100%; /*background-color:#cca;*/}
+    #headBox>dl>dt{width:100px; height: 100%;  color:#fff; float:left;
+    background-image:linear-gradient(90deg, #7cf 95%, #0cf);}
+    
+    #headBox button{width: 100%; height: 100%; background-color:transparent;}
     #headBox>dl>dt:hover{background-color: #f33;}
-    #headBox>dl>dd{width:calc(100% - 100px); height: 100%; background-color:#dfdfdf; float:left; overflow: hidden; /*transition: all 0.3s;*/}
-    #headBox>dl>dd:hover{background-color: #77f777;}
-    #headBox>dl>dd.ddWidth{width:0;}
+    #headBox>dl>dd{width: 0; height: 100%; background-color: #ccaaff;
+      float:left; overflow: hidden; /*transition: all 0.3s;*/}
+/*    #headBox>dl>dd:hover{background-color: #77f777;}*/
+    #headBox>dl>dd.ddWidth{width:calc(100% - 500px); }
     
 /*    #headBox dt:hover + dd{width:0; }*/
   </style>
@@ -32,22 +36,42 @@
    <h1>가로형 메뉴만들기</h1>
    <header id="headBox">  
     <dl>
-      <dt>메뉴제목</dt>
-      <dd>내용담기</dd>
-
+      <dt><button type="button">메뉴제목1</button></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio quae excepturi corporis necessitatibus quaerat ullam veritatis explicabo aliquam modi.</dd>
+      <dt><button type="button">메뉴제목2</button></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio quae excepturi corporis necessitatibus quaerat ullam veritatis explicabo aliquam modi.</dd>
+      <dt><button type="button">메뉴제목3</button></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio quae excepturi corporis necessitatibus quaerat ullam veritatis explicabo aliquam modi.</dd>
+      <dt><button type="button">메뉴제목3</button></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio quae excepturi corporis necessitatibus quaerat ullam veritatis explicabo aliquam modi.</dd>
+      <dt><button type="button">메뉴제목3</button></dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio quae excepturi corporis necessitatibus quaerat ullam veritatis explicabo aliquam modi.</dd>
+      
     </dl>
    </header>
   </div>
 <!-- jquery-->
   <script>
-  (function($){ 
-    var headbtn = $('#headBox').children('dl').children('dt');
-    var headDd = headbtn.next('dd');    
+  (function($){ //jQuery 시작($값을 매개변수하여 jQuery로 인식)코드
+    var headdl = $('#headBox').children('dl');// dl변수화
+    var headbtn = headdl.children('dt');//dt변수화
+    headbtn.eq(2).next('dd').addClass('ddWidth');//처음에있는dd값에 ddWidth입력
     
-    headbtn.on('click', function(){
-      headDd.toggleClass('ddWidth',300);
-    });
+    headdl.css({'overflow':'hidden'}); // 변수 headdl범위를 넘어가는것은 숨김처리
+    headbtn.on('click', horizonMenu); //dt클릭시 함수 horizonMenu실행
     
+    // 함수 horizonMenu내용 설정
+    function horizonMenu(){
+      var headDd = $(this).next('dd');  // 선택한 객체(무엇인지모름) 뒤의 dd를 변수화
+      var headddWidth = headDd.width(); // 변수처리된 headDd의 가로값을 변수화
+      var se = 500; // 시간을 변수화
+      if(headddWidth == 0){// 선택한 dt의 뒤에있는 가로값의 유무확인
+        // 가로값이 0이면 다른 dd의 ddWidth 삭제
+        $('#headBox').find('dd').removeClass('ddWidth',se); 
+        // 선택한 dt뒤의 dd가로값을 ddWidth값이 가진 내용으로 처리
+        headDd.addClass('ddWidth',se);
+      }//if
+    }// horizonMenu
    
   })(this.jQuery);  // jquery
   </script>
