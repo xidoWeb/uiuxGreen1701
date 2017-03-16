@@ -55,7 +55,7 @@
   (function($){ //jQuery 시작($값을 매개변수하여 jQuery로 인식)코드
     var headdl = $('#headBox').children('dl');// dl변수화
     var headbtn = headdl.children('dt');//dt변수화
-    headbtn.eq(2).next('dd').addClass('ddWidth');//처음에있는dd값에 ddWidth입력
+    headbtn.eq(0).next('dd').addClass('ddWidth');//처음에있는dd값에 ddWidth입력
     
     headdl.css({'overflow':'hidden'}); // 변수 headdl범위를 넘어가는것은 숨김처리
     headbtn.on('click', horizonMenu); //dt클릭시 함수 horizonMenu실행
