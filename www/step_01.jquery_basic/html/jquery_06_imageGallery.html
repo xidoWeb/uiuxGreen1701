@@ -67,8 +67,7 @@
   </div>
   
   
-  
-  
+
 <!-- jquery-->
   <script>
   (function($){ 
@@ -79,7 +78,10 @@
     galleryBtn.on('click', function(e){
       // 기본 a의 이벤트를 상쇄
       e.preventDefault();
+      var thisText = $(this).text();
+      console.log(thisText);
       
+      $('#imageBox').text(thisText);
       // return false;
     });
     
