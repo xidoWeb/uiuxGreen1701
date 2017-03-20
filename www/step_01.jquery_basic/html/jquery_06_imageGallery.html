@@ -45,7 +45,9 @@
       margin-left:-100%; margin-top: -100%;
       background-color:rgba(60, 100, 150, 0.7);}
     
-    .gallery>ul>li>a>img{}    
+    .gallery>ul>li>a>img{width: auto; height:100%; transition:all 0.5s linear;
+      position: absolute;}  
+    .gallery>ul>li:hover img{height: 130%; margin-top: -15%;}
   </style>
 </head>
 <body>
@@ -56,12 +58,24 @@
     </div>
     <div class="gallery">
         <ul>
-        <li><a href="#"><!--<img src="" alt="">-->image_01</a></li>
-        <li><a href="#"><!--<img src="" alt="">-->image_02</a></li>
-        <li><a href="#"><!--<img src="" alt="">-->image_03</a></li>
-        <li><a href="#"><!--<img src="" alt="">-->image_04</a></li>
-        <li><a href="#"><!--<img src="" alt="">-->image_05</a></li>
-        <li><a href="#"><!--<img src="" alt="">-->image_06</a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo1_thum.jpg" alt="사진설명_1">
+        </a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo2_thum.jpg" alt="사진설명_2">
+        </a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo3_thum.jpg" alt="사진설명_3">
+        </a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo4_thum.jpg" alt="사진설명_4">
+        </a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo5_thum.jpg" alt="사진설명_5">
+        </a></li>
+        <li><a href="#">
+          <img src="../img/gallery/thum/photo6_thum.jpg" alt="사진설명_6">
+        </a></li>
       </ul>
     </div>
   </div>
@@ -78,10 +92,18 @@
     galleryBtn.on('click', function(e){
       // 기본 a의 이벤트를 상쇄
       e.preventDefault();
-      var thisText = $(this).text();
+      //1 text 가져오기(테스트)
+     /* var thisText = $(this).text();
       console.log(thisText);
-      
       $('#imageBox').text(thisText);
+      */
+      
+      //2. 이미지에 있는 속성 src 가져오기(그대로 가져오면 원본이미지는 사라지기때문에 복제처리)
+      var thisImg = $(this).find('img').clone();//.attr('src');
+      console.log(thisImg);
+      // 가져온 src 이미지를  $('#imageBox') 안에 첨부
+       $('#imageBox').html(thisImg);
+      
       // return false;
     });
     
