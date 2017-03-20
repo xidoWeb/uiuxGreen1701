@@ -19,9 +19,10 @@
     #wrap{width: 100%; min-width:960px; height: auto; background-color:#fca;
       padding:2em; box-sizing: border-box;}
     h1{width: 100%; margin-bottom:1em; color:#357; text-align: center;}
-    #imageBox{width: 100%; height:600px; margin:auto; border:1em solid #fff;
+    #imageBox{width: 100%; height: auto; max-height:600px; margin:auto; border:1em solid #fff;
       box-shadow:0.3em 0.3em 0.2em rgba(50,50,50,0.5); margin-bottom:1em;
-      box-sizing: border-box;}
+      box-sizing: border-box; overflow: hidden;}
+    #imageBox img{width:100%; height:auto; }
     .gallery{width: 100%; height: 300px; border-top: 1px solid  #357; padding-top:1em;}
     .gallery>ul{width: 100%; height: 100%;}
     .gallery>ul>li{width: 150px; height: 150px; float: left; margin-left: 0.5em; overflow: hidden; border-radius:1em;}
@@ -54,26 +55,26 @@
   <div id="wrap">
     <h1>design gallery</h1>
     <div id="imageBox">
-      
+<!--      <img src="" alt="">-->
     </div>
     <div class="gallery">
         <ul>
-        <li><a href="#">
+        <li><a href="#" title="photo1.jpeg">
           <img src="../img/gallery/thum/photo1_thum.jpg" alt="사진설명_1">
         </a></li>
-        <li><a href="#">
+        <li><a href="#" title="photo2.jpeg">
           <img src="../img/gallery/thum/photo2_thum.jpg" alt="사진설명_2">
         </a></li>
-        <li><a href="#">
+        <li><a href="#" title="photo3.jpeg">
           <img src="../img/gallery/thum/photo3_thum.jpg" alt="사진설명_3">
         </a></li>
-        <li><a href="#">
+        <li><a href="#" title="photo4.jpeg">
           <img src="../img/gallery/thum/photo4_thum.jpg" alt="사진설명_4">
         </a></li>
-        <li><a href="#">
+        <li><a href="#" title="photo5.jpeg">
           <img src="../img/gallery/thum/photo5_thum.jpg" alt="사진설명_5">
         </a></li>
-        <li><a href="#">
+        <li><a href="#" title="photo6.jpeg">
           <img src="../img/gallery/thum/photo6_thum.jpg" alt="사진설명_6">
         </a></li>
       </ul>
@@ -92,17 +93,34 @@
     galleryBtn.on('click', function(e){
       // 기본 a의 이벤트를 상쇄
       e.preventDefault();
-      //1 text 가져오기(테스트)
+      //1. text 가져오기(테스트)
      /* var thisText = $(this).text();
       console.log(thisText);
       $('#imageBox').text(thisText);
       */
       
       //2. 이미지에 있는 속성 src 가져오기(그대로 가져오면 원본이미지는 사라지기때문에 복제처리)
+      /*
       var thisImg = $(this).find('img').clone();//.attr('src');
       console.log(thisImg);
       // 가져온 src 이미지를  $('#imageBox') 안에 첨부
        $('#imageBox').html(thisImg);
+      */
+      
+      
+      //3. 다른 속성을 이용해서 값을 담아내기
+      // 기본 경로값 가져오기
+      var bigImg = '../img/gallery/big/';
+      // 선택자의 속성(title)값 가져오기
+      var imgSrc = $(this).attr('title');
+      console.log(bigImg + imgSrc);
+      var viewImg = bigImg + imgSrc;
+      
+      // $('#imageBox') 내부에 img코드를 생성하고 src에 이미지 삽입!
+      var imgBoxIn = $('#imageBox').html('<img>');
+      imgBoxIn.find('img').attr('src', viewImg);
+      
+//       $('#imageBox').html('<img src=" '+ viewImg +' "/>');
       
       // return false;
     });
