@@ -30,11 +30,20 @@
     .gallery>ul>li>a{width: 100%; height: 100%; display: block; 
       background-color: #fff;  position: relative;}
     
+/*
     .gallery>ul>li>a::after{content:" "; display: block; width: 100%; height: 100%;
-      position: absolute; background-color:rgba(60, 100, 150, 0.7); z-index:100;
-      top: 0; left: 0;}
-    .gallery>ul>li:hover{}
+      position: absolute; background-color:transparent; z-index:100;
+      top: 0; left: 0; transition:all 0.3s linear;}
+    .gallery>ul>li:hover a::after{background-color:rgba(60, 100, 150, 0.7);}
+*/
     
+    .gallery>ul>li>a::after{content:" "; display: block; width:0; height:0;
+      position: absolute; background-color:transparent; z-index:100;
+      top:50%; left:50%; transition:all 0.5s linear; border-radius:100%;}
+    
+    .gallery>ul>li:hover a::after{width: 200%; height: 200%;
+      margin-left:-100%; margin-top: -100%;
+      background-color:rgba(60, 100, 150, 0.7);}
     
     .gallery>ul>li>a>img{}    
   </style>
@@ -63,8 +72,32 @@
 <!-- jquery-->
   <script>
   (function($){ 
-
+    // .gallery 내부 a를 변수(버튼)
+    var galleryBtn = $('.gallery').find('a');
+    
+    // galleryBtn 을 클릭
+    galleryBtn.on('click', function(e){
+      // 기본 a의 이벤트를 상쇄
+      e.preventDefault();
+      
+      // return false;
+    });
+    
   })(this.jQuery);  // IIFE
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
