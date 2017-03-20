@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="word, word, word" />
+  <meta name="description" content="paragraph" />
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+<!-- 조건부주석 cc:ie6 -->
+  <!--[if lte IE 9]>
+  
+  <![endif]-->
+  <title>html5</title>
+  <style>
+    #wrap{width: 100%; min-width:960px; height: auto; background-color:#fca;
+      padding:2em; box-sizing: border-box;}
+    h1{width: 100%; margin-bottom:1em; color:#357; text-align: center;}
+    #imageBox{width: 100%; height:600px; margin:auto; border:1em solid #fff;
+      box-shadow:0.3em 0.3em 0.2em rgba(50,50,50,0.5); margin-bottom:1em;
+      box-sizing: border-box;}
+    .gallery{width: 100%; height: 300px; border-top: 1px solid  #357; padding-top:1em;}
+    .gallery>ul{width: 100%; height: 100%;}
+    .gallery>ul>li{width: 150px; height: 150px; float: left; margin-left: 0.5em; overflow: hidden; border-radius:1em;}
+      
+    .gallery>ul>li:first-child{margin-left: 0;}
+    .gallery>ul>li>a{width: 100%; height: 100%; display: block; 
+      background-color: #fff;  position: relative;}
+    
+    .gallery>ul>li>a::after{content:" "; display: block; width: 100%; height: 100%;
+      position: absolute; background-color:rgba(60, 100, 150, 0.7); z-index:100;
+      top: 0; left: 0;}
+    .gallery>ul>li:hover{}
+    
+    
+    .gallery>ul>li>a>img{}    
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>design gallery</h1>
+    <div id="imageBox">
+      
+    </div>
+    <div class="gallery">
+        <ul>
+        <li><a href="#"><!--<img src="" alt="">-->image_01</a></li>
+        <li><a href="#"><!--<img src="" alt="">-->image_02</a></li>
+        <li><a href="#"><!--<img src="" alt="">-->image_03</a></li>
+        <li><a href="#"><!--<img src="" alt="">-->image_04</a></li>
+        <li><a href="#"><!--<img src="" alt="">-->image_05</a></li>
+        <li><a href="#"><!--<img src="" alt="">-->image_06</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+  
+<!-- jquery-->
+  <script>
+  (function($){ 
+
+  })(this.jQuery);  // IIFE
+  </script>
+</body>
+</html>
