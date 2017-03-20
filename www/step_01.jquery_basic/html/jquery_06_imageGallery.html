@@ -55,26 +55,26 @@
   <div id="wrap">
     <h1>design gallery</h1>
     <div id="imageBox">
-<!--      <img src="" alt="">-->
+<!--      <img src="../img/gallery/big/photo1.jpeg" alt="해당하는 큰 이미지 설명">-->
     </div>
     <div class="gallery">
         <ul>
-        <li><a href="#" title="photo1.jpeg">
-          <img src="../img/gallery/thum/photo1_thum.jpg" alt="사진설명_1">
+        <li><a href="../img/gallery/big/photo1.jpeg" title="해당하는 큰 이미지1 설명">
+          <img src="../img/gallery/thum/photo1_thum.jpg" alt="작은 이미지1 설명">
         </a></li>
-        <li><a href="#" title="photo2.jpeg">
+        <li><a href="../img/gallery/big/photo2.jpeg" title="해당하는 큰 이미지2 설명">
           <img src="../img/gallery/thum/photo2_thum.jpg" alt="사진설명_2">
         </a></li>
-        <li><a href="#" title="photo3.jpeg">
+        <li><a href="../img/gallery/big/photo3.jpeg" title="해당하는 큰 이미지3 설명">
           <img src="../img/gallery/thum/photo3_thum.jpg" alt="사진설명_3">
         </a></li>
-        <li><a href="#" title="photo4.jpeg">
+        <li><a href="../img/gallery/big/photo4.jpeg" title="해당하는 큰 이미지4 설명">
           <img src="../img/gallery/thum/photo4_thum.jpg" alt="사진설명_4">
         </a></li>
-        <li><a href="#" title="photo5.jpeg">
+        <li><a href="../img/gallery/big/photo5.jpeg" title="해당하는 큰 이미지5 설명">
           <img src="../img/gallery/thum/photo5_thum.jpg" alt="사진설명_5">
         </a></li>
-        <li><a href="#" title="photo6.jpeg">
+        <li><a href="../img/gallery/big/photo6.jpeg" title="해당하는 큰 이미지6 설명">
           <img src="../img/gallery/thum/photo6_thum.jpg" alt="사진설명_6">
         </a></li>
       </ul>
@@ -109,6 +109,7 @@
       
       
       //3. 다른 속성을 이용해서 값을 담아내기
+      /*
       // 기본 경로값 가져오기
       var bigImg = '../img/gallery/big/';
       // 선택자의 속성(title)값 가져오기
@@ -117,10 +118,27 @@
       var viewImg = bigImg + imgSrc;
       
       // $('#imageBox') 내부에 img코드를 생성하고 src에 이미지 삽입!
+     
+      // $('#imageBox').html('<img src=" '+ viewImg +' "/>');
+      // 위 코드와 동일한 내용을 메서트 체인으로 변경
       var imgBoxIn = $('#imageBox').html('<img>');
       imgBoxIn.find('img').attr('src', viewImg);
+      */
       
-//       $('#imageBox').html('<img src=" '+ viewImg +' "/>');
+      //4. 접근성을 고려한 이미지 갤러리 생성(구형브라우저지원)
+      // 이미지 링크에 찾아갈 이미지를 담아서 사용,
+      // 이때 e.preventDefault(); 는 어딘가로 이동하는 이벤트를 막아준다.
+      // 하지만 그 외의 속성의 기능들은 사용할 수 있다!
+      var imgHref = $(this).attr('href');
+      var imgTitle = $(this).attr('title');
+      // $('#imageBox')내부에 img생성
+      var imgBox = $('#imageBox').html('<img>');
+      
+      // img에 속성 src, alt값을 각각 첨부
+      imgBox.find('img').attr('src', imgHref);
+      imgBox.find('img').attr('alt', imgTitle);
+      
+      
       
       // return false;
     });
