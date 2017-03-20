@@ -49,6 +49,13 @@
     .gallery>ul>li>a>img{width: auto; height:100%; transition:all 0.5s linear;
       position: absolute;}  
     .gallery>ul>li:hover img{height: 130%; margin-top: -15%;}
+   
+    
+    
+    #imageBox{position: relative;}
+    .spanText{width: 100%; height: auto; padding:1em; box-sizing: border-box;
+     background-color:rgba(60,100,150,0.7); color:#fff; display: block;
+     position: absolute; bottom:0; left:0;}
   </style>
 </head>
 <body>
@@ -59,22 +66,22 @@
     </div>
     <div class="gallery">
         <ul>
-        <li><a href="../img/gallery/big/photo1.jpeg" title="해당하는 큰 이미지1 설명">
+        <li><a href="../img/gallery/big/photo1.jpeg" data-img="해당하는 큰 이미지1 설명">
           <img src="../img/gallery/thum/photo1_thum.jpg" alt="작은 이미지1 설명">
         </a></li>
-        <li><a href="../img/gallery/big/photo2.jpeg" title="해당하는 큰 이미지2 설명">
+        <li><a href="../img/gallery/big/photo2.jpeg" data-img="해당하는 큰 이미지2 설명">
           <img src="../img/gallery/thum/photo2_thum.jpg" alt="사진설명_2">
         </a></li>
-        <li><a href="../img/gallery/big/photo3.jpeg" title="해당하는 큰 이미지3 설명">
+        <li><a href="../img/gallery/big/photo3.jpeg" data-img="해당하는 큰 이미지3 설명">
           <img src="../img/gallery/thum/photo3_thum.jpg" alt="사진설명_3">
         </a></li>
-        <li><a href="../img/gallery/big/photo4.jpeg" title="해당하는 큰 이미지4 설명">
+        <li><a href="../img/gallery/big/photo4.jpeg" data-img="해당하는 큰 이미지4 설명">
           <img src="../img/gallery/thum/photo4_thum.jpg" alt="사진설명_4">
         </a></li>
-        <li><a href="../img/gallery/big/photo5.jpeg" title="해당하는 큰 이미지5 설명">
+        <li><a href="../img/gallery/big/photo5.jpeg" data-img="해당하는 큰 이미지5 설명">
           <img src="../img/gallery/thum/photo5_thum.jpg" alt="사진설명_5">
         </a></li>
-        <li><a href="../img/gallery/big/photo6.jpeg" title="해당하는 큰 이미지6 설명">
+        <li><a href="../img/gallery/big/photo6.jpeg" data-img="해당하는 큰 이미지6 설명">
           <img src="../img/gallery/thum/photo6_thum.jpg" alt="사진설명_6">
         </a></li>
       </ul>
@@ -130,13 +137,16 @@
       // 이때 e.preventDefault(); 는 어딘가로 이동하는 이벤트를 막아준다.
       // 하지만 그 외의 속성의 기능들은 사용할 수 있다!
       var imgHref = $(this).attr('href');
-      var imgTitle = $(this).attr('title');
+      var imgTitle = $(this).attr('data-img');
       // $('#imageBox')내부에 img생성
-      var imgBox = $('#imageBox').html('<img>');
+      var iBox = $('#imageBox');
+      var imgBox = iBox.html('<img>');
       
       // img에 속성 src, alt값을 각각 첨부
       imgBox.find('img').attr('src', imgHref);
       imgBox.find('img').attr('alt', imgTitle);
+      iBox.append('<span>').find('span').text(imgTitle).addClass('spanText');
+      
       
       
       
