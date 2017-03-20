@@ -11,8 +11,15 @@ margin-bottom: 1em; float: left; font-size: 1.3em;}
   background-color: rgba(10, 50, 150, 0.8); border-radius:1em;
   text-align: center; line-height: 100px;}
 #imgThum li:last-child{margin-bottom: 0;}
-#imgThum a{width: 100%; height: 100%; display: block;}
+
+#imgThum a{width: 100%; height: 100%; display: block; overflow: hidden;}
+#imgThum li img{width: auto; height: 100%;}
+
 #imgBox{width:90%; max-width:850px; height: auto; float:right;}
 #imgBox p{text-align: center; width: 100%; height: 100%;
   background-color:rgba(10, 50, 150, 0.8);padding:3em;
 color:#fff; font-size: 2em; box-sizing: border-box;}
+#imgBox img{width: 100%; height: auto;}
+
+
+
