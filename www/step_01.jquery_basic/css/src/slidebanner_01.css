@@ -21,10 +21,15 @@ h1{width: 100%; padding:1em;
 	font-weight: bold; cursor:pointer;}
 
 .btn span{width: 0; height: 0; display: block; overflow: hidden;}
+.fit{width: 50%; position: absolute;
+	z-index:50; right: 0; top: 0;
+	height: 100%; background-image:linear-gradient(45deg, #66f, #f5f);
+	font-size: 3em; box-sizing:border-box;
+	padding: 3rem; color:#fff;}
 
 /* 광고배너 내용 전체 위치 잡기 */
 .banner_box{width:400%; height: 100%; margin-left:-100%;}
-.banner_box>li{width:25%; height: 100%; float: left;
+.banner_box>li{width:12.5%; margin-right: 12.5%; height: 100%; float: left;
 	font-size:3em; color:#fff; text-align: center;
 	line-height: 25rem;}
 
