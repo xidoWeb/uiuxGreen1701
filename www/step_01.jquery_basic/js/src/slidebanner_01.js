@@ -4,6 +4,7 @@
 (function($){
   // jquery
   // 배너박스 변수화
+  var timed = 500;
   var bannerBox = $('.banner_box');
   var bannerLast = bannerBox.children('li:last');
   // 배너박스 마지막 리스트는 처음으로 이동
@@ -20,12 +21,12 @@
 */
 
 // 왼쪽 버튼
-  var lbtn = $('.lbtn');
+ var lbtn = $('.lbtn');
 // 왼쪽 버튼 클릭하면
 lbtn.on('click', function(e){
 	// 버튼에서 일어나는 이벤트 삭제
 	e.preventDefault();
-	var timed = 500;
+
 	// 박스내의 마지막 개체 재설정
 	var bannerLast = bannerBox.children('li:last');
 	// 광고배너박스 오른쪽으로 이동 후(function(){}) 
@@ -36,6 +37,27 @@ lbtn.on('click', function(e){
 		bannerBox.css({marginLeft:'-100%'});
 	});
 });
+// --------------------------------------------------------------
+// 오른버튼
+ var rbtn = $('.rbtn');
+// 오른쪽 버튼 클릭하면
+rbtn.on('click', function(e){
+	// 버튼에서 일어나는 이벤트 삭제
+	e.preventDefault();
+
+	// 박스내의 첫 개체 재설정
+	var bannerfirst = bannerBox.children('li:first');
+	// 광고배너박스 오른쪽으로 이동 후(function(){}) 
+	bannerBox.stop().animate({marginLeft:'-200%'},timed, function(){
+		// 마지막 개체를 처음으로 이동(애니X)
+		bannerBox.append(bannerfirst);
+		// 동시에 박스를 처음 설정으로 변경
+		bannerBox.css({marginLeft:'-100%'});
+	});
+
+});
+	$('#addBanner').css({overflow:'hidden'});
+
 
 
 
