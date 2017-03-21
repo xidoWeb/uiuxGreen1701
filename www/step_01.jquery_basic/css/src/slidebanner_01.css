@@ -23,13 +23,12 @@ h1{width: 100%; padding:1em;
 .btn span{width: 0; height: 0; display: block; overflow: hidden;}
 
 /* 광고배너 내용 전체 위치 잡기 */
-.banner_box{width:400%; height: 100%; background-color: #ccc;
-	margin-left:-100%;}
+.banner_box{width:400%; height: 100%; margin-left:-100%;}
 .banner_box>li{width:25%; height: 100%; float: left;
 	font-size:3em; color:#fff; text-align: center;
 	line-height: 25rem;}
 
-.banner_box>li:nth-child(1){background-color:#061;}
-.banner_box>li:nth-child(2){background-color:#106;}
-.banner_box>li:nth-child(3){background-color:#601;}
-.banner_box>li:nth-child(4){background-color:#f60;}
+.banner_box>li.banner_1{background-color:#061;}
+.banner_box>li.banner_2{background-color:#106;}
+.banner_box>li.banner_3{background-color:#601;}
+.banner_box>li.banner_4{background-color:#f60;}
