@@ -1,0 +1,25 @@
+/* sass_01_test.scss */
+h1 {
+  border-bottom: 1px solid #000;
+  color: #fff;
+  background-color: #ff3333; }
+
+h2 {
+  background-color: #ff9999; }
+
+p {
+  background-color: #660000; }
+
+.par_01 {
+  color: rgba(255, 255, 255, 0.7); }
+
+.par_02 {
+  color: #fff; }
+
+.par_03 {
+  color: #fff; }
+
+ul > li > a {
+  color: rgba(204, 170, 51, 0.3); }
+
+/*# sourceMappingURL=sass_01_test.css.map */

@@ -1,0 +1,22 @@
+/* sass_01_test.scss */
+// sass 에서 사용하는 한줄 주석
+
+// 변수 사용
+$primary:#f00;
+$sub1:#00f;
+$point:#000;
+$fontColor:#fff;
+$border:1px solid $point;
+
+h1{border-bottom:$border; color:$fontColor;
+  background-color:lighten($primary, 10%);}
+h2{background-color:lighten($primary, 30%);}
+p{background-color:darken($primary, 30%);}
+.par_01{color:rgba($fontColor, 0.7);}
+.par_02{color:$fontColor;}
+.par_03{color:$fontColor;}
+ul{
+  >li{
+      >a{color:rgba(#ca3, 0.3);}
+     }
+}// ul
