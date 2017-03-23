@@ -9,6 +9,18 @@
 
 /* table:sett */
 table{border:2px solid #555; border-left:0; border-right:0; }
-thead{background-color:#ccc;}
+thead{background-color:#ccc;} 
 tbody td{border-top:1px solid #555; vertical-align:middle; text-indent:3px;}
 tbody th{background-color:#acf;}
+
+/* nav last, first margin */
+.nav_fr li:first-child, .nav_la li:last-child{margin: 0; padding: 0; border:0;}
+
+
+
+
+
+
+
+
+
