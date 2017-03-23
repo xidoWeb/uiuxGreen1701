@@ -1,5 +1,16 @@
 /* modal_01.css */
+/*popup*/
+.popup{width:960px; height:auto; background-color: #aca; margin: 0 auto; position: relative; padding-top:1em; padding-bottom:1em; z-index:3000;
+}
+.popup:before{content:" "; width: 100vw; height:100%; position: absolute; top: 0; left:50%; margin-left: -50vw; z-index: -100;
+  background-color:inherit;}
+.popup p{color:#fff;}
+.popup .close_btn{position: absolute; right:-2em; bottom: 0; 
+  font-size: 3em; background-color:transparent;}
+.popup .close_btn:hover{color:#fff; text-shadow:0.1em 0.1em 0.1em rgba(0,0,0,0.7);}
 
+
+/* / ------------------------------------------------/ */
 #wrap{width: 100%; min-width: 960px; height: auto;}
 
 /* #headBox ------------------------ */
@@ -24,7 +35,7 @@
   border-radius:1em; overflow: hidden; text-align: center; line-height: 30px;}
 #addBox li:hover{background-color: #555; color:#fa0;}
 #addBox a {width: 100%; height: 100%; display: block; background-color:inherit;}
-
+#addBox a:focus{background-color: #763; color:#fff; font-weight: bold;}
     /* ------------ .modal --------------- */
 .modal{width: 100%; height: 100%; 
   position: fixed; top: 0; left: 0; z-index:1500;
@@ -32,7 +43,7 @@
 
 .modal>div{width:70vw; height: auto; 
   min-height:10vw; max-height:30vw; background-color:#fff;
-  border-radius:1em; box-sizing: border-box; padding:1.5em; 
+  border-radius:1em; box-sizing: border-box; padding:1.5em; padding-top: 3em;
   box-shadow:0.3em 0.3em 0.3em rgba(10,10,10,0.7); 
   position: absolute; top:10%; left: 50%; z-index:100;
   margin-left:-35vw; overflow-y:auto;                  display: none;}
