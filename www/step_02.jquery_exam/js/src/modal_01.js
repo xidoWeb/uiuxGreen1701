@@ -20,6 +20,9 @@
     $('html, body').stop().animate({scrollTop:$(this.hash).offset().top},timed);
   });
   
+  // modal -------------------------------------------------------------------
+  
+  
   
 })(this.jQuery);
 
