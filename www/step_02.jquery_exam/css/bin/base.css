@@ -1,0 +1,14 @@
+/* base.css */
+
+/* ir기법적용 */
+.hidden{width: 0; height: 0; display: block; overflow: hidden;}
+.hidden_wrap a>span{width: 0; height: 0; display: block; overflow: hidden;}
+
+/* clear:both 적용 */
+.clearfix:after, .cf:after{content:" "; display: block; clear: both;}
+
+/* table:sett */
+table{border:2px solid #555; border-left:0; border-right:0; }
+thead{background-color:#ccc;}
+tbody td{border-top:1px solid #555; vertical-align:middle; text-indent:3px;}
+tbody th{background-color:#acf;}
