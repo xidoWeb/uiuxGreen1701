@@ -21,8 +21,31 @@
   });
   
   // modal -------------------------------------------------------------------
-  
-  
+  var mb = $('.modal_btn');
+  var mbBtn = mb.find('li');
+  // 모달 창을 띄우려는 버튼 클릭 ...
+  mbBtn.on('click', function(e){
+    // a의 기본 이벤트 제거
+    e.preventDefault();
+    // 클릭한 li의 순서 확인
+    // .eq() : 몇번째 선택  ,    .index() : 몇번째인지 확인
+    var btnLi = $(this).index();
+//    console.log(btnLi);  // 순서확인
+    var mBox = $('.modal');
+    // .modal 나타나기(배경 어둡게)
+    mBox.fadeIn();
+    // .modal>div 순서에 맞는것을 나타나게하기
+    mBox.find('div').eq(btnLi).fadeIn();
+  });
   
 })(this.jQuery);
+
+
+
+
+
+
+
+
+
 
