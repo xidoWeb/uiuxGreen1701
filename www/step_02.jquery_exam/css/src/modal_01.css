@@ -3,8 +3,10 @@
 #wrap{width: 100%; min-width: 960px; height: auto;}
 
 /* #headBox ------------------------ */
-#headBox {width:960px; margin: 0 auto; height: auto; background-color: #cfcfcf;
-  padding: 10px; box-sizing: border-box;}
+#headBox {width:960px; margin:0 auto; height:auto; background-color:#cfcfcf;
+  padding:10px; box-sizing:border-box;
+  position: fixed; top:0; left:50%; margin-left:-480px;}
+
 #headBox h1 {width: 250px; height: 70px; float: left;}
 #headBox #gnb {width: 500px; height: 40px; float: right; margin-top: 30px;}
 #headBox ul {width: 100%; height: 100%;}
@@ -14,7 +16,7 @@
   color:#fff; text-align: center;}
 
 /* #addBox ------------------------ */
-#addBox {width: 100%; height: 450px; background-color: #afc;}
+#addBox {width: 100%; height: 450px; background-color: #afc; }
 #addBox h2 {font-size: 2em; color:#ccc; background-color: #469; 
   margin-bottom: 0.5em;}
 #addBox ul {width: 100%; padding: 3em; box-sizing: border-box;}

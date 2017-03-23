@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>scroll, offset</title>
+  <style>
+    h1{background-color: #59a; color:#fff; padding:0.3em;
+    font-size: 2em;}
+    p{width: 40%; margin: 1em 5%; padding:1em;
+      border:2px solid #59a;  box-sizing: border-box; position: fixed; top: 3em;}
+    .scroll_top{left:3%;}
+    .offset_top{right: 3%;}
+    p>span{
+     border-left:3px dashed #69a;
+     margin-left:5px; padding-left:5px; font-size: 2.5em;
+     color:#f03; font-weight: bold;}
+    body{height: 5000px;}
+  </style>
+</head>
+<body>
+  <h1>scrollTop, offset().top</h1>
+  <p class="scroll_top">
+   scrollTop
+    <span>scrollTop(???)</span>
+  </p>
+  <p class="offset_top">
+   offset().top
+    <span>offset().top(???)</span>
+  </p>
+  <div id="footer">aaaaa</div>
+<!-- jquery-->
+  <script>
+  (function($){ 
+    // dom이 아닌 브라우저의 스크롤 이동을 파악( $(window) )
+    // 스크롤 이벤트 발생시( on('scroll')  )....
+      $(window).on('scroll', function(){
+//        console.log('스크롤 되었습니다.');  // 스크롤 이동유무 파
+     // 브라우저의 스크롤상단에 떨어진 값 계산 하여 st에 담기
+      var st = $(window).scrollTop();
+     //  st값을 .scroll_top 안의 span에 삽입
+      $('.scroll_top').find('span').text(st);
+        
+        
+      var ot = $('#footer').offset().top;
+      $('.offset_top').find('span').text(ot);
+      });
+  })(this.jQuery);  // IIFE
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
