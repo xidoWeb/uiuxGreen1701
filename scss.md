@@ -32,7 +32,26 @@ sass/scss, less, stylus, postCSS, nextCss
 ## 사용법1
 
 1. 루비기반의 cli를 켠다!
+2. 해당하는 폴더에 `css​`와 `scss`폴더를 생성(파일을 구분)
+3. 명령어를 입력
+```cli
+$ sass scss:css                                   // scss 폴더에서 css로 변환(한번만 실행)
 
+$ sass -E utf-8 scss:css                          // 한글주석도 문제없이 처리
+
+$ sass --style compact scss:css                   // 변환시 코드내용을 각각 한줄로
+
+$ sass --watch scss:css                           // 실시간으로 변환
+
+$ sass --watch --style compact -E utf-8 scss:css  //종합처리 
+```
+
+
+## 기본 사용1
+1. 변수:  $를 앞에붙이면 변수이름이 된다. -> 사용은 $로 시작하는 이름을 사용
+2. 중첩...
+3. `@import '';`   `@import url();`와는 다른 코드로 scss의 파일을 모아서 하나로 병합
+4. `@mixin fn(){}` sass에서 사용하는 함수의 이름 사용할때에는 `@include fn()` 명령어로 사용(즉, 만들때는 @mixin, 불러올때에는 @include, 여기서 fn()은 함수 이름-바꿀 수 있다.)
 
 
 

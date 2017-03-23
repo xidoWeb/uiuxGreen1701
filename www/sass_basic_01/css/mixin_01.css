@@ -1,0 +1,6 @@
+/* mixin_01.css */
+#wrap { background-image: -webkit-linear-gradient(45deg, #f07, #0af); background-image: -moz-linear-gradient(45deg, #f07, #0af); background-image: -ms-linear-gradient(45deg, #f07, #0af); background-image: -o-linear-gradient(45deg, #f07, #0af); background-image: linear-gradient(45deg, #f07, #0af); }
+
+.text { width: 100%; height: auto; display: block; background-image: url("../../img/sass/main/more.gif"); background-repeat: no-repeat; background-position: 0 0; background-attachment: scroll; background-size: 100%; }
+
+/*# sourceMappingURL=mixin_01.css.map */

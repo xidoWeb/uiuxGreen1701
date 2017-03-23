@@ -1,0 +1,36 @@
+@import "_setting";
+
+// test.scss 
+
+h1{width: 100%; height: 100%; background-color:$primary;
+border-bottom:$border;}
+
+#wrap{}
+#wrap>.he{}
+#wrap>.he>ul{}
+#wrap>.he>ul>li{}
+#wrap>.he>ul>li:hover{}
+#wrap>.he>ul>li:nth-child(1){}
+#wrap>.he>ul>li:nth-child(1):hover{}
+//---------------------------------------------
+
+#wrap{width: 100%; 
+	>.he{width:inherit;
+		>ul{width: 50%;
+			>li{width:inherit;}
+			>li:hover{width: 200%;}
+
+			>li:nth-child(1){width: 30%;
+				&:hover{width: 100%;}
+			}// li:nth(1)
+		}// ul
+	}// .he
+}// #wrap
+// --------------------------------------------------------
+// mixin
+
+// 인자(매개변수)
+
+
+
+// interpolation: 변수를 선택자와 속성사이에 사용하는경우 다양한 오류가 발생하는것을 처리하기 위해 사용하는것

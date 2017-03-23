@@ -1,0 +1,34 @@
+@import '_setting';
+
+// mixin_01.scss
+/* mixin_01.css */
+
+
+@mixin width($u){
+	background-image:-webkit-linear-gradient(#{$u});
+	background-image:-moz-linear-gradient(#{$u});
+	background-image:-ms-linear-gradient(#{$u});
+	background-image:-o-linear-gradient(#{$u});
+	background-image:linear-gradient(#{$u});
+}
+
+#wrap{@include width('45deg, #f07, #0af');}
+
+
+$url:'../../img/sass/main/';
+@mixin img($w:100%, $h:auto, $b:block, $u:$url, $f:'test', $i:'png'){
+	width:$w;
+	height:$h;
+	display: $b;
+	background-image:url($u + $f + '.' + $i);
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	background-attachment:scroll;
+	background-size:100%;
+}
+
+// #wrap>a{@include img();}
+// .box>a{@include img(100%,100%, none, '../img/b.jpg');}
+// .box2>a{@include img($h:200%);}
+// .url{@include img($u:'../img/test.jpg');}
+  .text{@include img($f:'more', $i:'gif');}
