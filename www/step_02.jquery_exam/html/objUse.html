@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>Document</title>
+  <style>
+    .btn{width: 100%; height: 30px; background-color: #359; color:#fff;
+      font-size:1.3em; font-weight: bold;}
+    .popup{width: 100%; height:auto; background-color: #ccc;
+      box-sizing: border-box; padding:0.5em; font-size: 2em; border-bottom:2px solid #369;}
+    #wrap{width: 100%; height: auto; background-color: #ffa;
+      padding:0 3em; box-sizing: border-box;}
+    .box{width: 100%; height: 500px; background-color: #cfcfcf;}
+    h1{background-color:#369; color:#fff; font-size: 3em;
+      padding: 1em;}
+  </style>
+</head>
+<body>
+<button class="btn">팝업버튼</button>
+
+<div class="popup">popup window</div>
+
+ <div id="wrap">
+  <div class="box">
+    <h1>function object test</h1>
+  </div> 
+ </div>
+ 
+ 
+ 
+  <script>
+    (function(){
+      // step_02 외부함수 제작
+    
+       var on = function(type, timed){
+          $(type).stop(false, true)
+            .animate({backgroundColor:'#fa0', color:'#222'},timed);
+       }
+       var off = function(type, timed){
+         $(type).stop(false, true)
+           .animate({backgroundColor:'#07f', color:'#fff'},timed);
+       }
+       var obj = {on:on, off:off};
+      
+      // 버튼을 클릭(이벤트처리요망)
+      $('.btn').on('click', function(e){
+        e.preventDefault();
+        
+        var popup = $('.popup');
+        var popupdp = popup.css('display');
+        var timed = 200;
+        
+          popup.slideToggle(timed);
+        
+        
+    /*// step_01    
+        // popup창의 존재여부를 확인하여 h1및 기타 다른기능을 제어할 수 있도록 처리
+        if(popupdp == 'none'){
+         // popup이 보이지 않을경우  
+          $('h1')
+            .stop(false, true)
+            .animate({backgroundColor:'#fa0', color:'#222'},timed);
+        }else{
+         // popup이 보일 경우
+         $('h1')
+           .stop(false, true)
+           .animate({backgroundColor:'#07f', color:'#fff'},timed);
+        }
+     */  
+        
+      // step_02
+      // 외부의 함수를 가져와서 사용하는 방법
+      if(popupdp == 'none'){
+        obj.on('.box',200);
+      }else{
+        obj.off('.box',1000);
+      }
+        
+      });
+    })(this.jQuery);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
