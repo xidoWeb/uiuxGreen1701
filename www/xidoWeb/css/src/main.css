@@ -1,19 +1,45 @@
 /* main.css */
 
 /* #wrap ----------------------------------------------*/
-#wrap{width: 960px; height:auto; margin: 0 auto;}
+#wrap{width:960px; height:auto; margin: 0 auto;}
 
 /* #headBox ----------------------------------------------*/
-#headBox{width: 100%; height: 60px; background-color: #f06;}
+#headBox{width:100%; height: 60px; background-color: #f06; position: relative;}
   h1{width: 120px; height:inherit; background-color:#575757; float: left;}
-  .sitemap{width: 176px; height: 40px; margin-top: 10px; float: 10px; float: right; 
+  .sitemap{width: 176px; height: 40px; margin-top: 10px; margin-right: 10px; float: right; 
     background-color: #cfcfcf;}
   #gnb{width:800px; height: 30px; margin-right: 10px; margin-top: 10px;
       border-bottom:1px solid #575757; box-sizing:border-box; 
-      background-color: #fff; float: right;}
+      background-color: #fff; float: right; position:absolute; right: 0;  bottom:-30px;}
 
 /* #addBanner ----------------------------------------------*/
-#addBanner{width: 100%; height: 430px; background-color: #cfcfcf;}
+#addBanner{width: 100%; height: 430px; background-color: #cfcfcf; /* overflow:hidden; */
+  position: relative;}
+.ad_btn{width: 100%; height:0; position:absolute; top: 50%; left: 0;
+  box-sizing: border-box; padding:0 10px;}
+.ad_btn>div{width: 59px; height: 82px; margin-top: -37px; background-color: #ccc;
+  cursor:pointer;}
+  
+.ad_btn>.ad_btn_left{float: left;}
+.ad_btn>.ad_btn_right{float: right;}
+.indicator{width:66px; height: 10px; position: absolute; right:100px; bottom:30px;}
+.indicator>li{width: 10px; height: 10px; margin-right: 4px; 
+  float: left; background-color: #f06;}
+.indicator>li:last-child{margin-right: 0;}
+.indicator>li>a{}
+.indi_1{}
+.indi_2{}
+.indi_3{}
+.indi_4{}
+.indi_5{}
+
+.banner_box{width:500%; height:inherit; margin-left: -100%; background-color: #cfcf00;}
+.banner_box>li{width:20%; height: 100%; float: left; font-size: 3em;}
+.banner_box_1{}
+.banner_box_2{}
+.banner_box_3{}
+.banner_box_4{}
+.banner_box_5{}
 
 /* #contentBox ----------------------------------------------*/
 #contentBox{width: 100%; height: 360px; background-color: #f06;}
