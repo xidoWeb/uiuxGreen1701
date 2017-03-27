@@ -13,13 +13,13 @@
       background-color: #fff; float: right; position:absolute; right: 0;  bottom:-30px;}
 
 /* #addBanner ----------------------------------------------*/
-#addBanner{width: 100%; height: 430px; background-color: #cfcfcf; /* overflow:hidden; */
+#addBanner{width: 100%; height: 430px; background-color: #cfcfcf; overflow:hidden;
   position: relative;}
 .ad_btn{width: 100%; height:0; position:absolute; top: 50%; left: 0;
   box-sizing: border-box; padding:0 10px;}
 .ad_btn>div{width: 59px; height: 82px; margin-top: -37px; background-color: #ccc;
   cursor:pointer;}
-  
+
 .ad_btn>.ad_btn_left{float: left;}
 .ad_btn>.ad_btn_right{float: right;}
 .indicator{width:66px; height: 10px; position: absolute; right:100px; bottom:30px;}
@@ -42,7 +42,17 @@
 .banner_box_5{}
 
 /* #contentBox ----------------------------------------------*/
-#contentBox{width: 100%; height: 360px; background-color: #f06;}
+#contentBox{width: 100%; height:auto; padding:20px 30px; box-sizing:border-box; background-color: #f06;}
+  .content_title{width:100%; height:22px; background-color: #cfcfcf; margin-bottom: 18px;}
+  .content_title > h3{width:50px; height:inherit; float: left; margin-right: 10px;}
+  .content_title > .content_inner_line{width:calc(100% - 92px); height: 15px; float: left;
+    border-bottom:2px solid #fff;}
+  .content_title > .more_view{width: 22px; height:inherit; float: right;
+    margin-left:10px;}
+  .content_p{width:100%; height:auto;}
+  .content_p::after{content:" "; display: block; clear: both;}
+    .forum_link{width: 380px; height:280px; float: left; background-color: #0af;}
+    .today_people{width:calc(100% - 380px); height:280px; float: right; background-color: #ddf;}
 
 /* #footBox ----------------------------------------------*/
 #footBox{width: 100%; height: 120px; background-color: #575757;}
