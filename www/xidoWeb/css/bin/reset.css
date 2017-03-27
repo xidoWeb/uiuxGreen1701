@@ -9,7 +9,7 @@ img,
 ul,ol,li,dt,dd,dl{ 
   margin: 0; padding: 0; border: 0; outline: 0;
   color:#575757; font-size:100%; line-height:1.2; 
-  font-family:'myriad pro', arial, nanumGothic, dotum, sans-serif;}
+  font-family:'Nanum Gothic', 'myriad pro', arial, dotum, sans-serif;}
 
 /* set_1 */
 ul,ol,li{list-style: none;}
