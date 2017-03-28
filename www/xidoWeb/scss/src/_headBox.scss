@@ -1,8 +1,17 @@
 /* #headBox ----------------------------------------------*/
-#headBox{width:100%; height: 60px; background-color: #f06; position: relative;}
-  h1{width: 120px; height:inherit; background-color:#575757; float: left;}
-  .sitemap{width: 176px; height: 40px; margin-top: 10px; margin-right: 10px; float: right; 
-    background-color: #cfcfcf;}
+
+$url:"../img/all/header/";
+
+#headBox{width:100%; height: 60px; background-color:$main; position: relative;
+	background-image:url($url+"nar.png");
+	background-repeat:no-repeat; background-position:160px 10px;}
+
+  h1{width: 150px; height:inherit; background-color:$deepGray; float: left;}
+	h1.hidden_wrap >a{background-image:url($url+"logo.png");
+		background-position:10px 10px;}
+
+  .sitemap{width:176px; height:40px; margin-top:10px; margin-right:10px; float:right; 
+    background-color:$lightGray;}
   #gnb{width:800px; height: 30px; margin-right: 10px; margin-top: 10px;
-      border-bottom:1px solid #575757; box-sizing:border-box; 
-      background-color: #fff; float: right; position:absolute; right: 0;  bottom:-30px;}
+      border-bottom:1px solid $deepGray; box-sizing:border-box; 
+      background-color:$white; float: right; position:absolute; right: 0;  bottom:-30px;}
