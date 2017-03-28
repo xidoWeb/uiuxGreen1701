@@ -20,10 +20,30 @@
 <body>
   <div id="wrap">
     <header id="headBox">
-      <h1 class="hidden_wrap">
+      <h1>
         <a href="main.html"><span>시도웹 사이트</span></a>
       </h1>
-      <div class="sitemap"></div>
+      <div class="sitemap">
+        <nav class="unb">
+          <h3 class="hidden">utility navigation</h3>
+          <ul>
+            <li><a href="#">log in</a></li>
+            <li><a href="#">join</a></li>
+            <li><a href="#"><abbr title="question and answer">Q &amp; A</abbr></a></li>
+          </ul>
+        </nav>
+        <form class="searchbox">
+          <fieldset>
+            <legend class="hidden">검색영역</legend>
+          <input type="search" id="search" name="search" value="" placeholder="검색하세요">
+            <label for="search" class="hidden">검색할 내용을 입력하세요</label>
+            <button type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <span class="hidden">검색</span>
+            </button>
+          </fieldset>
+        </form>
+      </div>
       <nav id="gnb"></nav><!-- #gnb -->
     </header><!-- #headBox -->
 

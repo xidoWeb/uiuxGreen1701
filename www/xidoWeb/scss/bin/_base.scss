@@ -8,7 +8,7 @@
     background-repeat:no-repeat; background-position:0 0;}
 .hidden_wrap a>span{width: 0; height: 0; display: block; overflow: hidden;}
 
-@mixin imgWrap($w:"100%",$h:"100%",$b:"block", $r:"no-repeat", $p:"0 0", $u:$url, $f:"img.jpg"){
+@mixin imgWrap($w:100%, $h:100%, $b:block, $r:no-repeat, $p:0 0, $u:$url, $f:"img.jpg"){
   a{width:$w; height:$h; display:$b;
     background-repeat:$r; 
     background-position:$p;
