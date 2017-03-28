@@ -70,7 +70,18 @@ h1 a > span { width: 0; height: 0; display: block; overflow: hidden; }
 .sitemap > .searchbox > fieldset > button { width: 20px; height: 100%; background-color: #575757; float: right; }
 .sitemap > .searchbox > fieldset > button > i { color: #fff; }
 
-#gnb { width: 800px; height: 30px; margin-right: 10px; margin-top: 10px; border-bottom: 1px solid #575757; box-sizing: border-box; background-color: #fff; float: right; position: absolute; right: 0; bottom: -30px; }
+#gnb { width: 800px; height: 30px; margin-right: 10px; margin-top: 10px; border-bottom: 1px solid #575757; box-sizing: border-box; background-color: #fff; float: right; position: absolute; right: 0; bottom: -30px; z-index: 1000; }
+
+/*
+// 접근성 사용시 보이는 글자와, 실제 글자가 다른 내용일경우 사용 #gnb li:nth-child(1){ >a{>span{width: 0; height: 0; display: block;overflow: hidden;}} >a::after{content:"about.xido";}        }
+*/
+#gnb > ul { width: 100%; height: 100%; }
+
+#gnb li { width: 100%; height: 100%; float: left; }
+
+#gnb li > a { width: 100%; height: 100%; display: block; background-image: url("../img/all/nav/nav_all.png"); background-repeat: no-repeat; }
+
+#gnb li > a > span { width: 0; height: 0; display: block; overflow: hidden; }
 
 /* main_addBanner.css ----------------------------------------------*/
 #addBanner { width: 100%; height: 430px; background-color: #cfcfcf; overflow: hidden; position: relative; }
