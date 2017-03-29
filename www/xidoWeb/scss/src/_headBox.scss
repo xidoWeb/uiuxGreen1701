@@ -64,26 +64,46 @@ $gnbLi:(65px,77px,74px,91px,39px,32px);
     background-image: url("../img/all/nav/nav_all.png"); background-repeat:no-repeat;
     transition:all 0.3s;}
 
-  #gnb li:nth-child(1){width:65px;}
-  #gnb li:nth-child(2){width:77px;}
-  #gnb li:nth-child(3){width:74px;}
-  #gnb li:nth-child(4){width:91px;}
-  #gnb li:nth-child(5){width:39px;}
-  #gnb li:nth-child(6){width:32px; margin-right: 0;}
 
-  #gnb li:nth-child(1)>a{background-position:0 5px;}
-  #gnb li:nth-child(2)>a{background-position:-140px 5px;}
-  #gnb li:nth-child(3)>a{background-position:-291px 5px;}
-  #gnb li:nth-child(4)>a{background-position:-440px 5px;}
-  #gnb li:nth-child(5)>a{background-position:-606px 5px;}
-  #gnb li:nth-child(6)>a{background-position:-719px 5px;}
+  // #gnb li:nth-child(1){width:65px;}
+  // #gnb li:nth-child(2){width:77px;}
+  // #gnb li:nth-child(3){width:74px;}
+  // #gnb li:nth-child(4){width:91px;}
+  // #gnb li:nth-child(5){width:39px;}
+  // #gnb li:nth-child(6){width:32px; margin-right: 0;}
 
-  #gnb li:nth-child(1)>a:hover{background-position:0 bottom;}
-  #gnb li:nth-child(2)>a:hover{background-position:-140px bottom;}
-  #gnb li:nth-child(3)>a:hover{background-position:-291px bottom;}
-  #gnb li:nth-child(4)>a:hover{background-position:-440px bottom;}
-  #gnb li:nth-child(5)>a:hover{background-position:-606px bottom;}
-  #gnb li:nth-child(6)>a:hover{background-position:-719px bottom;}
+  // #gnb li:nth-child(1)>a{background-position:0 5px;}
+  // #gnb li:nth-child(2)>a{background-position:-140px 5px;}
+  // #gnb li:nth-child(3)>a{background-position:-291px 5px;}
+  // #gnb li:nth-child(4)>a{background-position:-440px 5px;}
+  // #gnb li:nth-child(5)>a{background-position:-606px 5px;}
+  // #gnb li:nth-child(6)>a{background-position:-719px 5px;}
 
-  #gnb li>a>span{width: 0; height: 0; display: block; overflow: hidden;}    
+  // #gnb li:nth-child(1)>a:hover{background-position:0 bottom;}
+  // #gnb li:nth-child(2)>a:hover{background-position:-140px bottom;}
+  // #gnb li:nth-child(3)>a:hover{background-position:-291px bottom;}
+  // #gnb li:nth-child(4)>a:hover{background-position:-440px bottom;}
+  // #gnb li:nth-child(5)>a:hover{background-position:-606px bottom;}
+  // #gnb li:nth-child(6)>a:hover{background-position:-719px bottom;}
+  // #gnb li>a>span{width: 0; height: 0; display: block; overflow: hidden;}    
       
+#gnb{
+  // $gnbli생성해서 li가 가지는 각각의 가로값을 입력(list형태)
+  $gnbli:(65px,77px,74px,91px,39px,32px);
+  // $gnbPosition생성해서 li 각각의 안에 있는 a의 이미지 위치값을 입력 
+  $gnbPosition:(0 5px, -140px 5px, -291px 5px, -440px 5px, -606px 5px, -719px 5px);
+  $gnbPosition-on:(0 bottom,-140px bottom,-291px bottom,-440px bottom,-606px bottom,-719px bottom);
+  // 6번의 반복 처리하기위해 반복문은 사용
+  // @for문 사용, $i:임의 변수 생성, from 1 : 1부터 시작
+  // length($gnbli) : 변수 $gnbli의 갯수를 파악
+  // $i에 (1부터 $gnbli의 갯수만큼을 반복할 수 있게 하나씩 변수 대입)
+  @for $i from 1 length($gnbli){
+    // li:nth-child(#{$i})   : li에 각각(순서_ $i)
+    // width:nth($gnbli, $i);  :  width값을 $gnbli의 $i 번째 값으로 대체
+    li:nth-child(#{$i}){width:nth($gnbli, $i);} // li세팅
+    li:nth-child(#{$i})>a{background-position:nth($gnbPosition, $i);} // a 이미지 위치
+    li:nth-child(#{$i}):hover>a{background-position:nth($gnbPosition-on, $i);} //li:hover>a 이미지 위치
+  }// @for
+  li:last-child{margin-right: 0;}
+  li>a>span{width: 0; height: 0; display: block; overflow: hidden;}    
+}
