@@ -169,9 +169,20 @@ h1 a > span { width: 0; height: 0; display: block; overflow: hidden; }
 /* footBox.css ----------------------------------------------*/
 #footBox { width: 100%; height: 120px; background-color: #575757; }
 
-#footBox > h2 { width: 80px; height: 40px; float: left; background-color: #cfcfcf; margin-top: 40px; margin-left: 30px; margin-right: 86px; }
+#footBox > h2 { width: 120px; height: 38px; float: left; margin-top: 40px; margin-left: 30px; margin-right: 86px; background-image: url("../img/all/footer/h2_logo.png"); background-size: 100%; background-repeat: no-repeat; background-position: 0 0; position: relative; }
+#footBox > h2::after { content: "let's playing design group"; color: #cfcfcf; font-size: 0.65em; letter-spacing: -0.035em; position: absolute; left: 0; bottom: -1em; }
 
-.info_area { width: 430px; height: 75px; float: left; background-color: #cfcfcf; margin-top: 25px; }
+.info_area { width: 430px; height: 75px; float: left; margin-top: 25px; }
+.info_area .info { width: 100%; height: 1.2rem; }
+.info_area .info > li { width: auto; height: 0.8rem; position: relative; float: left; padding: 0 6px; color: #fff; line-height: 1.2rem; }
+.info_area .info > li::after { content: " "; border-right: 1px solid gray; position: absolute; top: 0.2rem; right: 0; z-index: 100; width: 0; height: 100%; display: block; }
+.info_area .info > li:first-child { padding-left: 0; }
+.info_area .info > li:last-child { padding-right: 0; border-right: 0; }
+.info_area .info > li:last-child::after { display: none; }
+.info_area .info a { padding: 0 2px; }
+.info_area address { font-style: normal; color: #cfcfcf; }
+.info_area address p { color: inherit; font-size: 0.875rem; }
+.info_area address p strong { margin-right: 0.2rem; text-transform: capitalize; }
 
 .info_more { width: 134px; height: 100px; float: right; background-color: #cfcfcf; margin-right: 30px; }
 

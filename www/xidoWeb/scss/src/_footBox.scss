@@ -1,8 +1,60 @@
 /* footBox.css ----------------------------------------------*/
-#footBox{width: 100%; height: 120px; background-color: #575757;}
-  #footBox>h2{width:80px; height:40px; float: left;  background-color: #cfcfcf;
-    margin-top:40px; margin-left:30px; margin-right: 86px;}
-  .info_area{width:430px; height:75px; float: left; background-color: #cfcfcf;
-    margin-top:25px;}
+$url:"../img/all/footer/";
+@mixin bg($r:no-repeat, $p:'0 0'){
+  background-repeat:$r;
+  background-position:#{$p};
+}
+
+#footBox{width: 100%; height: 120px; background-color:$deepGray;}
+
+  #footBox>h2{width:120px; height:38px; float: left; 
+    margin-top:40px; margin-left:30px; margin-right: 86px;
+    background-image: url($url+"h2_logo.png");
+    background-size:100%;
+    @include bg(); position: relative;
+    &::after{content:"let's playing design group"; color:$lightGray; font-size:0.65em;
+      letter-spacing:-0.035em; position: absolute; left: 0; bottom:-1em;}
+    }// h2
+
+
+$bd: 1px solid darken($white, 50%);
+
+  .info_area{width:430px; height:75px; float: left; margin-top:25px;
+    .info{width: 100%; height: 1.2rem; 
+      >li{width: auto; height: 0.8rem; position: relative;
+        float: left; padding:0 6px;  color:$white; line-height:1.2rem;
+        &::after{content:" "; border-right:$bd; position: absolute; top: 0.2rem;
+           right:0;  z-index: 100; width:0; height: 100%; display: block;}
+        &:first-child{padding-left: 0;}
+        &:last-child{padding-right: 0; border-right: 0;
+          &::after{display: none;}
+        }
+       
+      }// li
+      
+      a{padding:0 2px;}
+    }// .info
+    
+    address{font-style: normal; color:$lightGray;
+        p{color:inherit; font-size:0.875rem;
+          strong{margin-right: 0.2rem; text-transform:capitalize;}
+        }
+      }// address
+    
+    }// .info_area
+
+
+
   .info_more{width:134px; height:100px; float: right; background-color: #cfcfcf;
     margin-right: 30px;}
+
+
+
+
+
+
+
+
+
+
+
