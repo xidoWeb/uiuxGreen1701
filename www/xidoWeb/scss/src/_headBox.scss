@@ -52,9 +52,6 @@ $url:"../img/all/header/";
     }
 */
 $gnbLi:(65px,77px,74px,91px,39px,32px);
-@each(){
-
-}
 
 
   #gnb>ul{width: 100%; height: 100%; box-sizing:border-box; 
@@ -64,7 +61,7 @@ $gnbLi:(65px,77px,74px,91px,39px,32px);
     background-image: url("../img/all/nav/nav_all.png"); background-repeat:no-repeat;
     transition:all 0.3s;}
 
-
+/*
   // #gnb li:nth-child(1){width:65px;}
   // #gnb li:nth-child(2){width:77px;}
   // #gnb li:nth-child(3){width:74px;}
@@ -87,7 +84,7 @@ $gnbLi:(65px,77px,74px,91px,39px,32px);
   // #gnb li:nth-child(5)>a:hover{background-position:-606px bottom;}
   // #gnb li:nth-child(6)>a:hover{background-position:-719px bottom;}
   // #gnb li>a>span{width: 0; height: 0; display: block; overflow: hidden;}    
-      
+*/      
 #gnb{
   // $gnbli생성해서 li가 가지는 각각의 가로값을 입력(list형태)
   $gnbli:(65px,77px,74px,91px,39px,32px);
