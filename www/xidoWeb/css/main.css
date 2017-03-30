@@ -157,9 +157,14 @@ h1 a > span { width: 0; height: 0; display: block; overflow: hidden; }
 
 .content_p::after { content: " "; display: block; clear: both; }
 
-.forum_link { width: 380px; height: 280px; float: left; background-color: #0af; }
+.forum_link { width: 380px; height: 280px; float: left; background-image: url("../img/main/article/article_box_01.png"); padding: 20px 50px 20px 200px; box-sizing: border-box; }
+.forum_link > li { width: 100%; height: 40px; color: #fff; font-size: 1em; font-weight: bold; padding-top: 20px; box-sizing: border-box; border-bottom: 1px solid #fff; }
 
-.today_people { width: calc(100% - 380px); height: 280px; float: right; background-color: #ddf; }
+.today_people { width: calc(100% - 380px); height: 280px; float: right; }
+.today_people .people_img { width: 240px; height: 100%; float: left; overflow: hidden; }
+.today_people .people_img > img { width: auto; height: 100%; }
+.today_people .people_nar { width: calc(100% - 240px); height: 100%; float: right; overflow: hidden; box-sizing: border-box; padding: 0.5em; font-size: .985em; background-image: linear-gradient(120deg, #f06 60%, black 95%); }
+.today_people .people_nar > p { width: 100%; height: 100%; color: #fff; overflow-y: scroll; padding-right: 3em; }
 
 /* footBox.css ----------------------------------------------*/
 #footBox { width: 100%; height: 120px; background-color: #575757; }

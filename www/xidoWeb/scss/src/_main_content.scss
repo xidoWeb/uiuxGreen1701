@@ -13,11 +13,34 @@
     }// .more_view
   }// .content_title
 
-
+$url:"../img/main/article/";
   .content_p{width:100%; height:auto;}
   .content_p::after{content:" "; display: block; clear: both;}
-    .forum_link{width: 380px; height:280px; float: left; background-color: #0af;}
-    .today_people{width:calc(100% - 380px); height:280px; float: right; background-color: #ddf;}
+    .forum_link{width: 380px; height:280px; float: left; 
+      background-image:url($url + "article_box_01.png"); padding:20px 50px 20px 200px; box-sizing: border-box; 
+      
+      >li{width: 100%; height:40px; color:$white; font-size:1em; font-weight: bold; padding-top:20px; box-sizing: border-box;
+        border-bottom:1px solid $white;}
+    }// .forum_link
+
+    .today_people{width:calc(100% - 380px); height:280px; float: right;
+      
+      .people_img{width: 240px; height: 100%; float: left; 
+        overflow: hidden;
+        >img{width:auto; height:100%;}
+      }// .people_img
+      .people_nar{width:calc(100% - 240px); height: 100%; 
+        float: right; overflow: hidden;
+        box-sizing: border-box; padding: 0.5em; font-size: .985em;
+        background-image:linear-gradient(120deg, $main 60%, darken($main, 50%) 95%);
+        
+        >p{width: 100%; height: 100%; color:$white;          
+          overflow-y: scroll; padding-right:3em;
+        }// p
+        
+      }// .people_nar
+      
+    }// .today_people
 
 
 
