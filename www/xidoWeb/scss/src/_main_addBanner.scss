@@ -29,10 +29,20 @@ $url:'../img/main/banner/';
 .indi_4{}
 .indi_5{}
 
-.banner_box{width:500%; height:inherit; margin-left: -100%; background-color: #cfcf00;}
-.banner_box>li{width:20%; height: 100%; float: left; font-size: 3em;}
-.banner_box_1{}
-.banner_box_2{}
-.banner_box_3{}
-.banner_box_4{}
-.banner_box_5{}
+.banner_box{width:500%; height:inherit; margin-left: -100%;}
+.banner_box>li{width:20%; height: 100%; float: left; font-size: 3em;
+  background-repeat:no-repeat; background-position:center bottom;
+  background-size:;}
+.banner_1{background-image:url($url + "banner_04.png");}
+.banner_2{background-image:url($url + "banner_05.png");}
+.banner_3{background-image:url($url + "banner_02.png");}
+.banner_4{background-image:url($url + "banner_03.png");}
+.banner_5{background-image:url($url + "banner_01.png");}
+
+
+
+
+
+
+
+
