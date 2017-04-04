@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/reset.css">
+  <title>Document</title>
+  <style>
+    h1{width: 5em; height: 5em; background-color:#f7a;
+      color:#fff; font-size:1.5rem; line-height: 5em;
+      text-align: center; border-radius:5em;
+      padding: 1em;
+      animation:test 2s 3 linear 1s alternate-reverse forwards running; 
+      }
+    h1:hover{animation-play-state:paused;}
+    p{width: 3em; height: 3em; background-color: #04f;
+      border-radius:1em;
+      animation:test 3s infinite ease-in alternate;
+      }
+
+/* 
+  animation-name:keyframes의 이름;   
+  animation-duration:시간;
+  animation-iteration-count:반복횟수;
+    반복 숫자를 입력하거나, 무제한(infinite)
+
+  animation-timing-function:움직임;
+  animation-delay:animation 지연시간;
+  animation-direction:진행방향; 
+    기본(normal), 역방향(reverse), 정/역방향 순서의 진자(alternate), 역/정방향 순서의 진자(alternate-reverse)
+
+  animation-fill-mode:animation 후 결과;
+    마지막(backwards), 처음(forwards), 상황에따라(both), 기본(normal)
+  animation-play-state:상태;
+    움직임(running), 일시정지(paused)
+*/
+    @keyframes test {
+      0%{transform:translate(0) rotate(0deg);}
+      100%{transform:translate(300px) rotate(90deg);}
+    }
+
+  </style>
+</head>
+<body>
+  <h1>animation1</h1>
+  <p>sample</p>
+</body>
+</html>
