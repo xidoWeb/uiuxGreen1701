@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/reset.css">
+  <title>animation</title>
+  <style>
+    h1{padding: 1em; background-color: #07f; color:#fff;}
+    .transition{width: 80%; min-width:600px; height: auto; margin: 0 auto;}
+    h2{background-color: #777; color:#fff; padding: 0.5em;}
+    p{padding-bottom:0.5em; border-bottom:1px solid #777; margin-bottom: 0.5em;}
+    ul{width: 100%; height: auto; padding: 0.5em;  
+      box-sizing:border-box; border:1px double #777;}
+    li{width:200px; height:40px; overflow:hidden; font-weight:bold;}
+    li:nth-child(1){background-color: #1a5;}
+    li:nth-child(2){background-color: #2b6;}
+    li:nth-child(3){background-color: #3c7;}
+    li:nth-child(4){background-color: #4d8;}
+    li:nth-child(5){background-color: #5e9;}
+    li:nth-child(6){background-color: #6ef;}
+
+/* transition basic */
+    .transition:hover li:nth-child(1){
+        background-color: #f0a; color:#9af; text-indent:1em; 
+        transition-property:color; transition-duration:1s;
+        transition-delay:1.5s;  transition-timing-function:ease;}
+
+    .transition:hover li:nth-child(2){
+        background-color: #d1b; color:#7bf; text-indent:2em; 
+        transition-property:background-color; transition-duration:0.5s;
+        transition-delay:2s; transition-timing-function:ease-in;}
+
+    .transition:hover li:nth-child(3){
+        background-color: #c2c; color:#5cf; text-indent:3em; 
+        transition-property:text-indent; transition-duration:2.5s;
+        transition-delay:0; transition-timing-function:ease-in-out;}
+
+    .transition:hover li:nth-child(4){
+        background-color: #b3d; color:#3df; text-indent:4em;
+        transition-property:all; 
+        transition-timing-function:cubic-bezier(0,1.26,.75,-1.55);
+        transition-duration:1s;}
+
+      .transition:hover li:nth-child(5){
+        width: 100%;
+        background-color: #a4e; color:#1ef; text-indent:5em;
+        /*transition:property duration tf delay;*/
+        transition:all 1s cubic-bezier(0,1.26,.75,-1.55) 0.2s;}
+  /*
+  transition은 4가지 기능을 가진다.
+  
+  1. transition-property: 'transition효과를 줄 속성을 선택';
+  2. transition-duration: 'trantition 사용 시간(초는 s를 붙인다.)';
+  3. transition-timing-function: '동작하는데 필요한 움직임 형태(점점 빠르게, 점점 느리게, 빨라지다 느려지게, 지속적)'; 
+    // ease-in, ease-out, ease-in-out | ease, linear, cubic-bezier();
+  4. transition-delay: 'transition을 동작하기전 기다림(초는 s를 붙인다.)';
+  5. transition:property duration timing delay;  // 전체를 한꺼번에 사용
+  */
+
+  /* timing-function */
+  .timing li{transition:all 2s;}
+  .timing:hover li{width: 100%;}
+  .timing:hover li:nth-child(1){transition-timing-function:linear;}
+  .timing:hover li:nth-child(2){transition-timing-function:ease-in;}
+  .timing:hover li:nth-child(3){transition-timing-function:ease-out;}
+  .timing:hover li:nth-child(4){transition-timing-function:ease-in-out;}
+  .timing:hover li:nth-child(5){transition-timing-function:ease;}
+  .timing:hover li:nth-child(6){
+         transition-timing-function:cubic-bezier(0,1.26,.75,-1.55);}
+    </style>
+  }
+</head>
+<body>
+  <h1>animation</h1>
+  <div class="transition">
+    <h2>transition1</h2>
+    <p>
+     transition은 단편적인 애니메이션 효과<br>
+     transition에는 
+     속성(property), 
+     시간(duration), 
+     움직임(function), 
+     지연시간(delay) 등의 4가지 기능을 가진다.
+    </p>
+    <ul>
+      <li>transition-property</li>
+      <li>transition-duration</li>
+      <li>transition-function</li>
+      <li>transition-delay</li>
+      <li>transition_all</li>
+    </ul>
+  </div>
+  <div class="timing">
+    <h2>timing-function</h2>
+    <ul>
+      <li>linear</li>
+      <li>ease-in</li>
+      <li>ease-out</li>
+      <li>ease-in-out</li>
+      <li>ease</li>
+      <li>cubic-bezier</li>
+    </ul>
+
+  </div>
+</body>
+</html>
