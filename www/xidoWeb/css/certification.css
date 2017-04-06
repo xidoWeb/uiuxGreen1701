@@ -22,8 +22,46 @@ h1 {
   #certification .certifi_box {
     width: 100%;
     height: 292px;
-    background-color: #cfcfcf;
+    background-color: #fa0;
     padding: 18px 38px;
     box-sizing: border-box; }
+    #certification .certifi_box > h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem; }
+    #certification .certifi_box > p {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem; }
+    #certification .certifi_box > form {
+      width: 100%;
+      height: auto; }
+    #certification .certifi_box fieldset {
+      width: 100%;
+      box-sizing: border-box; }
+    #certification .certifi_box .telecom {
+      height: auto;
+      margin-bottom: 0.875rem;
+      border-bottom: 1px solid #575757; }
+      #certification .certifi_box .telecom > div {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        background-color: #575757;
+        margin-bottom: 0.3rem; }
+    #certification .certifi_box .btn {
+      height: 40px;
+      padding: 0 90px; }
+      #certification .certifi_box .btn button {
+        width: 70px;
+        height: 40px;
+        font-size: 1.375rem; }
+      #certification .certifi_box .btn [type="submit"] {
+        float: left;
+        background-color: #f06;
+        color: #fff; }
+      #certification .certifi_box .btn [type="reset"] {
+        float: right;
+        background-color: #cfcfcf;
+        color: #575757; }
 
 /*# sourceMappingURL=certification.css.map */

@@ -14,6 +14,36 @@ h1{padding: 1px; background-color:$primary; color:$white; font-size: 2em;}
   //  .color_box{width: 150px; height: 150px;background-color:lighten($main, 20%);
   //    display: block; position: absolute; top: -50px; right: -50px; transform: rotate(-30deg);}
 
-  .certifi_box{width: 100%; height: 292px; background-color:$lightGray;
-    padding:18px 38px; box-sizing: border-box;}
+  .certifi_box{width: 100%; height: 292px; background-color:#fa0;
+    padding:18px 38px; box-sizing: border-box;
+      >h3{font-size:1.125rem; margin-bottom:0.5rem;}
+      >p{font-size: 0.875rem; margin-bottom:0.75rem;}
+      >form{width: 100%; height: auto;}
+      fieldset{width: 100%; box-sizing: border-box;}
+      .telecom{height: auto; margin-bottom:0.875rem; border-bottom:1px solid $deepGray;
+        >div{width: 100%; height: auto; padding:20px 10px; box-sizing: border-box;
+          background-color:$deepGray; margin-bottom: 0.3rem;}
+        }// div
+      .btn{height: 40px; padding: 0 90px;
+         button{width: 70px; height: 40px;  font-size:1.375rem;}
+         [type="submit"]{float: left; background-color:$main; color:$white;}
+         [type="reset"]{float: right; background-color:$lightGray; color:$deepGray;}
+      }//.btn
+
+  }//.certifi_box
 }// #certification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
