@@ -1,0 +1,19 @@
+// certification.scss
+@import "./bin/setting";
+
+h1{padding: 1px; background-color:$primary; color:$white; font-size: 2em;}
+
+#certification{width: 450px; height: 365px; margin: 0 auto;
+  h2{width: 100%; height: 73px; padding:28px 38px;
+    box-sizing: border-box; color:$white; font-size:1.375rem;
+    background-color:$main;
+    position: relative; overflow: hidden;
+    background-image:linear-gradient(60deg, $main 80%,
+                     lighten($main,20%) 80%,
+                     lighten($main,10%));}
+  //  .color_box{width: 150px; height: 150px;background-color:lighten($main, 20%);
+  //    display: block; position: absolute; top: -50px; right: -50px; transform: rotate(-30deg);}
+
+  .certifi_box{width: 100%; height: 292px; background-color:$lightGray;
+    padding:18px 38px; box-sizing: border-box;}
+}// #certification
