@@ -22,8 +22,27 @@ h1{padding: 1px; background-color:$primary; color:$white; font-size: 2em;}
       fieldset{width: 100%; box-sizing: border-box;}
       .telecom{height: auto; margin-bottom:0.875rem; border-bottom:1px solid $deepGray;
         >div{width: 100%; height: auto; padding:20px 10px; box-sizing: border-box;
-          background-color:$deepGray; margin-bottom: 0.3rem;}
-        }// div
+          background-color:$lightGray; margin-bottom: 0.3rem;}// div
+        dl{width: 100%; height: 20px;
+            dt{width:70px; height: 100%; float: left;
+              font-size:0.875rem; letter-spacing:-0.025rem}
+            dd{width: 70px; height: 100%; margin-left:22px; float: left;
+              position: relative;}
+            dd::before{content:"-"; position: absolute; left: -20%;}
+            dd:first-of-type::before{display: none;}
+          }//dl
+        .num{margin-bottom: 16px;
+          select{width: 100%; height: 100%; border:1px solid $deepGray;}
+          input{width: 100%; height: 100%; border:1px solid $deepGray;
+            text-indent:0.5rem;}
+        }// .num
+        .tel{
+          input{display: none;}
+          label>i{margin-right: 0.3em; transition:all 0.2s;}
+          input:checked + label>i{color:$main; font-size: 1.2em;}
+        }// .tekl
+
+        }// .telecom
       .btn{height: 40px; padding: 0 90px;
          button{width: 70px; height: 40px;  font-size:1.375rem;}
          [type="submit"]{float: left; background-color:$main; color:$white;}
