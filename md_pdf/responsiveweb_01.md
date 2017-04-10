@@ -55,7 +55,7 @@ ___
 ### media query(코드수정_축소)
 1. 모바일`~599`
     - `@media screen and (max-width:599px) { }`
-2. 태블릿`601~1023`
+2. 태블릿`600~1023`
 	- `@media screen and (min-width:600px) and (max-width:1023px) {}`
 5. pc(기본)
     - `@media screen and (min-width:1024px) {}`

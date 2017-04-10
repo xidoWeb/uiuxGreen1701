@@ -1,0 +1,44 @@
+/* respon_02.css */
+#wrap{width:0; height: auto;}
+#headBox{width: 100%; height: 250px; background-color: #fa0;}
+#addBanner{}
+#content{width: 100%; height: 700px; background-color: #f05;}
+#etcBox{}
+#footBox{width: 100%; height: 200px; background-color: #777;}
+
+/* mobile */
+@media screen and (max-width:599px) {/* min-width: 280 */
+  #wrap{width:100%; min-width:280px;}
+  #addBanner{display: none;}
+  #content{height:250vw;}
+  #etcBox{display: none;}
+}
+
+/* tablet */
+@media screen and (min-width:600px) and (max-width:1023px) {
+  #wrap{width:100%;}
+  #headBox{height:150px;}
+  #addBanner{width: 100%; height: 400px; background-color: #ada;}
+  #content{height:600px;}
+  #etcBox{display: none;}
+}
+
+/* pc */
+@media screen and (min-width:1024px) {
+  #wrap{width: 100%; }
+  #wrap::after{content:" "; display: block; clear: both;}
+  #headBox{height: 150px; float:left;}
+  #addBanner{width: 40%; height: 450px;  background-color: #ada;float:left;}
+  #content{width: 60%; height: 450px; float:left;}
+  #etcBox{width: 100%; height: 300px; background-color: #acf; float:left;}
+  #footBox{float: left;}
+}
+
+
+
+
+
+
+
+
+/**/

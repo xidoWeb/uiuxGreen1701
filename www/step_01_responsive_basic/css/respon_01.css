@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* respon_01.css */
+
+body{background-color: #ccc; transition:all 0.3s ease;}
+  h1{color:#fff; font-size:2rem; background-color: #05f; padding: 1em;
+    transition:all 0.7s ease; text-indent:0.5em;}
+
+
+/* device ---- max-width:599px ---------------------- */
+@media screen and (max-width:599px){
+  body{background-color: #acf;}
+  h1{width: 100%; box-sizing: border-box;
+    color:#fa0; background-color: #171717; padding-top:0.2em;  text-indent:5em;
+  white-space:nowrap;}
+}/* 599px~ */
+
+/* device ---- 600~1023 ---------------------------- */
+@media screen and (min-width:600px) and (max-width:1023px) {
+  body{background-color: #fac;}
+}/* 600~1023 */
+
+/* device ---- 1024~ ---------------------------- */
+@media screen and (min-width:1024px) {
+  body{background-color: #caf;}
+}/* 1024~ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
