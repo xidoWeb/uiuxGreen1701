@@ -1,34 +1,33 @@
 /* respon_02.css */
-#wrap{width:0; height: auto;}
-#headBox{width: 100%; height: 250px; background-color: #fa0;}
-#addBanner{}
-#content{width: 100%; height: 700px; background-color: #f05;}
-#etcBox{}
-#footBox{width: 100%; height: 200px; background-color: #777;}
+
+
+#wrap{width: 100%; height: auto;}
+#wrap::after{content:" "; display: block; clear: both;}
+#headBox{width: 100%; height: 15.625rem;/* 250px / 16 */ background-color: #fa0;}
+#addBanner{background-color: #ada;}
+#content{width: 100%; height: 43.75rem;/*700px/16 */  background-color: #f05;}
+#etcBox{display: none;}
+#footBox{width: 100%; height: 12.5rem;/* 200px/ 16 */ background-color: #777;}
 
 /* mobile */
 @media screen and (max-width:599px) {/* min-width: 280 */
-  #wrap{width:100%; min-width:280px;}
-  #addBanner{display: none;}
-  #content{height:250vw;}
-  #etcBox{display: none;}
+  #wrap{min-width:17.5px;}
+  #addBanner{display: none; }
+  #content{height:250vw;/* 700 / 280 * 100 */ }
 }
 
 /* tablet */
 @media screen and (min-width:600px) and (max-width:1023px) {
-  #wrap{width:100%;}
+
   #headBox{height:150px;}
-  #addBanner{width: 100%; height: 400px; background-color: #ada;}
+  #addBanner{width: 100%; height: 400px;}
   #content{height:600px;}
-  #etcBox{display: none;}
 }
 
 /* pc */
 @media screen and (min-width:1024px) {
-  #wrap{width: 100%; }
-  #wrap::after{content:" "; display: block; clear: both;}
   #headBox{height: 150px; float:left;}
-  #addBanner{width: 40%; height: 450px;  background-color: #ada;float:left;}
+  #addBanner{width: 40%; height: 450px; float:left;}
   #content{width: 60%; height: 450px; float:left;}
   #etcBox{width: 100%; height: 300px; background-color: #acf; float:left;}
   #footBox{float: left;}
