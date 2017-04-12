@@ -2,7 +2,6 @@
 /* base */
 *{transition:all 0.5s;}
 #wrap{width: 100%; height: auto;}
-#wrap::after{content:" "; display: block; clear: both;}
 #headBox{width: 100%; height:100px; background-color:#faf;
   position: relative;}
 h1{width: 100px; height:inherit; background-color: #9f9;}
@@ -11,7 +10,21 @@ h1{width: 100px; height:inherit; background-color: #9f9;}
 #gnb:hover{background-color: #171717;}
 
 #adBanner{width: 100%; height:400px; background-color:#a6a;}
-#contentBox{width: 100%; height:500px; background-color:#8f7;}
+#contentBox{width: 100%; height:auto; background-color:#8f7;}
+#contentBox::after{content:" "; display: block; clear: both;}
+/*
+.con_01{width: 25%; height: 100%; background-color:#fa6; float:left;}
+.con_02{width: 25%; height: 100%; background-color:#0f4; float:left;}
+.con_03{width: 25%; height: 100%; background-color:#fa6; float:left;}
+.con_04{width: 25%; height: 100%; background-color:#0f4; float:left;}
+*/
+#contentBox>div{width: 25%; height: 100%; float:left; }
+#contentBox>div:nth-child(2n-1){background-color:#fa6;}
+#contentBox>div:nth-child(2n){background-color:#0f4;}
+.portable{width: 100%; height: auto;}
+.m_01{width: 100%; height:20vw; background-color:#ff0;}
+.m_02{width: 100%; height:40vw; background-color:#f60;}
+
 #footBox{width: 100%; height:50px; background-color:#401;}
 #footBox>h2{width: 100px; height:inherit; background-color: #0af;}
 
@@ -20,15 +33,32 @@ h1{width: 100px; height:inherit; background-color: #9f9;}
   #headBox{height:70px;}
   h1{width: 100%;}
   #gnb{display: block; }
+  #adBanner{height: 500px;}
+  /* 768크기일경우 높이 500만큼(가변성) */
+  #contentBox{height:65.104167vw;}/* 500/768*100 vw */
+  #contentBox>div{width: 50%; height: 50%;}
+  #contentBox>div:nth-of-type(1){float: right;}
+  
   #footBox>h2{width: 250px; margin: 0 auto;}
 }/* //---- mobile/table_V */
 
 /* tablet_H */
 @media screen and (min-width:768px) and (max-width:959px) {
-  
+  #adBanner{height: 350px;}
+  /* 960기준일때 높이 800(가변성) */
+  #contentBox{height:83.333333vw;}/* 800/960*100(vw) */
 }/* //---- tablet_H */
 
 /* pc/pcfull */
 @media screen and (min-width:960px) {
-  
+  #contentBox{height:83.333333vw; /* 800/960*100(vw) */
+              max-height:62.5rem; /* 1000/16(rem) */ }
+  .portable{display: none;}
 }/* //---- pc/pcfull */
+
+
+
+
+
+
+
