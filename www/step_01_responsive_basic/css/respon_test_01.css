@@ -1,0 +1,34 @@
+/* respon_test_01.css */
+/* base */
+*{transition:all 0.5s;}
+#wrap{width: 100%; height: auto;}
+#wrap::after{content:" "; display: block; clear: both;}
+#headBox{width: 100%; height:100px; background-color:#faf;
+  position: relative;}
+h1{width: 100px; height:inherit; background-color: #9f9;}
+#gnb{display: none; width: 50px; height: 50px; background-color:#fff;
+  position: absolute; top: 15px; right: 15px; z-index: 100;}
+#gnb:hover{background-color: #171717;}
+
+#adBanner{width: 100%; height:400px; background-color:#a6a;}
+#contentBox{width: 100%; height:500px; background-color:#8f7;}
+#footBox{width: 100%; height:50px; background-color:#401;}
+#footBox>h2{width: 100px; height:inherit; background-color: #0af;}
+
+/* mobile/table_V */
+@media screen and (max-width:767px) {
+  #headBox{height:70px;}
+  h1{width: 100%;}
+  #gnb{display: block; }
+  #footBox>h2{width: 250px; margin: 0 auto;}
+}/* //---- mobile/table_V */
+
+/* tablet_H */
+@media screen and (min-width:768px) and (max-width:959px) {
+  
+}/* //---- tablet_H */
+
+/* pc/pcfull */
+@media screen and (min-width:960px) {
+  
+}/* //---- pc/pcfull */
