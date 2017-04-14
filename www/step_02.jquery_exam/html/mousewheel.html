@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>tab_menu_01</title>
+  <style>
+    .up{background-color: #ccc;}
+    .down{background-color: #0af;}
+  </style>
+</head>
+<body>
+  
+<!-- jquery -->
+  <script>
+    (function($){
+      var body = $('html, body');
+      body.on('mousewheel DOMMouseScroll', function(event){
+        var delta = event.originalEvent.deltaY;
+        var d2 = event.target;
+        console.log(delta);
+        if(delta > 0 ){
+          body.addClass('down');
+          body.removeClass('up');
+        }else{
+          body.removeClass('down');
+          body.addClass('up');
+        }
+      });
+      
+//        $("html, body").on('mousewheel DOMMouseScroll', function(e) {
+//                var E = e.originalEvent;
+//                delta = 0;
+//                console.log(E);
+//                if (E.detail) {
+//                    delta = E.detail * -40;
+//                    $('body').text(delta);
+//                }else{
+//                    delta = E.wheelDelta;
+//                    $('body').text(delta);
+//                };
+//            });
+
+
+    })(this.jQuery);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
