@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>tab_menu_01</title>
+  <style>
+/*    기초 디자인 */
+    .tab{width: 80%; height:180px; margin: 0 auto; border:2px solid #777;}
+    .tab>ul{width: 100%; height: 30px;}
+    .tab>ul>li{width: 25%; height: 100%; float: left; text-align: center;
+      background-color: #ccc; line-height: 30px;}
+    .tab>ul>li>a{width: 100%; height: 100%; display: block;}
+    .tab_box{width: 100%; height:600px; background-color: #cca;}
+    .tab_box>div{width: 100%; height:150px; box-sizing: border-box;
+      padding: 1em;}
+    .tab_box>div:nth-of-type(1){background-color:#05f;}
+    .tab_box>div:nth-of-type(2){background-color:#09a;}
+    .tab_box>div:nth-of-type(3){background-color:#0a5;}
+    .tab_box>div:nth-of-type(4){background-color:#0f1;}
+    
+/*    기능 할당 */
+    /* .tab영역의 넘치는 영역 숨기 */
+    .tab{overflow: hidden;}
+    
+    /* -- 각 영역별 기능 class 할당 -- */
+    .tab>ul>li.active{background-color:#f06; color:#fff; 
+      border-bottom:2px solid #fff; box-sizing: border-box; 
+      font-weight: bold;} 
+    .tab_box>div{transition:margin 0.5s; position: relative;}
+    .tab_box>div:nth-of-type(1){z-index:100;}
+    .tab_box>div:nth-of-type(2){z-index:200;}
+    .tab_box>div:nth-of-type(3){z-index:300;}
+    .tab_box>div:nth-of-type(4){z-index:400;}
+    .tab_box>div:nth-of-type(1).active_box{margin-top:0;}
+    .tab_box>div:nth-of-type(2).active_box{margin-top:-150px;}
+    .tab_box>div:nth-of-type(3).active_box{margin-top:-300px;}
+    .tab_box>div:nth-of-type(4).active_box{margin-top:-450px;}
+  </style>
+</head>
+<body>
+  <h1>tab menu</h1>
+  <div class="tab">
+    <ul>
+      <li><a href="#">tabs_01</a></li>
+      <li><a href="#">tabs_02</a></li>
+      <li><a href="#">tabs_03</a></li>
+      <li><a href="#">tabs_04</a></li>
+    </ul>
+    <div class="tab_box">
+      <div>
+        <h2>tabs_01</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere?</p>
+      </div>
+      <div>
+        <h2>tabs_02</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at illo, rerum totam dolores ea eum labore explicabo quam voluptatem!</p>
+      </div>
+      <div>
+        <h2>tabs_03</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aspernatur iusto ullam? Error debitis voluptatibus, voluptatum quam deserunt quae exercitationem neque autem culpa numquam omnis nemo vero animi, pariatur quaerat eaque, libero iusto dignissimos voluptate! Quibusdam, id? Vitae, porro, dolor!</p>
+      </div>
+      <div>
+        <h2>tabs_04</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, reprehenderit, debitis. Nam nihil impedit animi vitae alias nostrum hic consequatur eius, omnis, dolorum facilis enim quo, vel ex? Commodi, illo! ipsum dolor sit amet, consectetur adipisicing elit. Facere, quidem earum! Dolore architecto illo accusamus adipisci odio assumenda, neque voluptates voluptatum eveniet excepturi illum tempora perferendis quae quos natus perspiciatis.</p>
+      </div>
+    </div>
+  </div>
+  
+<!-- jquery -->
+  <script>
+    (function($){
+      var tabLi = $('.tab').find('li');
+      
+      tabLi.on('click', function(evt){
+        evt.preventDefault();
+        var $this = $(this);
+        var thisIndex = $this.index(); //클릭한 li의 순서 확인
+        
+        tabLi.removeClass('active');
+        $this.addClass('active');
+        // div에 .active_box 할당(해당 순서 확인)
+        
+        var tabDiv = $('.tab_box').find('div');
+        
+        tabDiv.removeClass('active_box');
+        tabDiv.eq(thisIndex).addClass('active_box');
+        
+      });
+    })(this.jQuery);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

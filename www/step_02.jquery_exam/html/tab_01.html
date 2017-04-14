@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>tab_menu_01</title>
+  <style>
+/*    기초 디자인 */
+    .tab{width: 80%; height: auto; margin: 0 auto; border:2px solid #777;}
+    .tab>ul{width: 100%; height: 30px;}
+    .tab>ul>li{width: 25%; height: 100%; float: left; text-align: center;
+      background-color: #ccc; line-height: 30px;}
+    .tab>ul>li>a{width: 100%; height: 100%; display: block;}
+    .tab_box{width: 100%; height: 150px; background-color: #cca;}
+    .tab_box>div{width: 100%; height: 100%; box-sizing: border-box;
+      padding: 1em;}
+    .tab_box>div:nth-of-type(1){background-color:#05f;}
+    .tab_box>div:nth-of-type(2){background-color:#09a;}
+    .tab_box>div:nth-of-type(3){background-color:#0a5;}
+    .tab_box>div:nth-of-type(4){background-color:#0f1;}
+    
+/*    기능 할당 */
+    /* -- 처음에 div 전체 안보이게 만들기 -- */ 
+    .tab_box>div{display: none;}
+    /* -- 각 영역별 기능 class 할당 -- */
+    .tab>ul>li.active{background-color:#f06; color:#fff; 
+      border-bottom:2px solid #fff; box-sizing: border-box; 
+      font-weight: bold;} 
+    .tab_box>div.active_box{display: block;}
+  </style>
+</head>
+<body>
+  <h1>tab menu</h1>
+  <div class="tab">
+    <ul>
+      <li><a href="#">tabs_01</a></li>
+      <li><a href="#">tabs_02</a></li>
+      <li><a href="#">tabs_03</a></li>
+      <li><a href="#">tabs_04</a></li>
+    </ul>
+    <div class="tab_box">
+      <div>
+        <h2>tabs_01</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere?</p>
+      </div>
+      <div>
+        <h2>tabs_02</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis at illo, rerum totam dolores ea eum labore explicabo quam voluptatem!</p>
+      </div>
+      <div>
+        <h2>tabs_03</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aspernatur iusto ullam? Error debitis voluptatibus, voluptatum quam deserunt quae exercitationem neque autem culpa numquam omnis nemo vero animi, pariatur quaerat eaque, libero iusto dignissimos voluptate! Quibusdam, id? Vitae, porro, dolor!</p>
+      </div>
+      <div>
+        <h2>tabs_04</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, reprehenderit, debitis. Nam nihil impedit animi vitae alias nostrum hic consequatur eius, omnis, dolorum facilis enim quo, vel ex? Commodi, illo! ipsum dolor sit amet, consectetur adipisicing elit. Facere, quidem earum! Dolore architecto illo accusamus adipisci odio assumenda, neque voluptates voluptatum eveniet excepturi illum tempora perferendis quae quos natus perspiciatis.</p>
+      </div>
+    </div>
+  </div>
+  
+<!-- jquery -->
+  <script>
+    (function($){
+      var tabLi = $('.tab').find('li');
+      var tabInDiv = $('.tab_box').children('div');
+      
+      tabLi.eq(0).addClass('active');// 최초 설
+      tabInDiv.eq(0).addClass('active_box');// 최초 설
+      
+      tabLi.on('click', function(e){
+        e.preventDefault();
+        // ----------------------------------------------------
+        var $this = $(this); // 선택한 li
+        var indexLi = $this.index(); // 선택 li의 순서
+        console.log(indexLi);// console에 확인
+        
+        tabLi.removeClass('active'); // .tab안의 li에 .active를 제거
+        $this.addClass('active'); // 선택한 li에 .active를 추가
+        
+        // ----------------------------------------------------
+        
+        //.tab_box안의 div에 .active_box 제거
+         tabInDiv.removeClass('active_box'); 
+        //선택된 순서에 맞는 div에 .active_box를 추가
+         tabInDiv.eq(indexLi).addClass('active_box');
+        
+      });// li => click
+    })(this.jQuery);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
