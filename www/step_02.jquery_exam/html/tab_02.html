@@ -30,15 +30,8 @@
     .tab>ul>li.active{background-color:#f06; color:#fff; 
       border-bottom:2px solid #fff; box-sizing: border-box; 
       font-weight: bold;} 
-    .tab_box>div{transition:margin 0.5s; position: relative;}
-    .tab_box>div:nth-of-type(1){z-index:100;}
-    .tab_box>div:nth-of-type(2){z-index:200;}
-    .tab_box>div:nth-of-type(3){z-index:300;}
-    .tab_box>div:nth-of-type(4){z-index:400;}
-    .tab_box>div:nth-of-type(1).active_box{margin-top:0;}
-    .tab_box>div:nth-of-type(2).active_box{margin-top:-150px;}
-    .tab_box>div:nth-of-type(3).active_box{margin-top:-300px;}
-    .tab_box>div:nth-of-type(4).active_box{margin-top:-450px;}
+
+    .tab_box{transition:margin 0.5s;}
   </style>
 </head>
 <body>
@@ -74,6 +67,7 @@
   <script>
     (function($){
       var tabLi = $('.tab').find('li');
+      tabLi.eq(0).addClass('active');
       
       tabLi.on('click', function(evt){
         evt.preventDefault();
@@ -82,12 +76,12 @@
         
         tabLi.removeClass('active');
         $this.addClass('active');
-        // div에 .active_box 할당(해당 순서 확인)
         
-        var tabDiv = $('.tab_box').find('div');
         
-        tabDiv.removeClass('active_box');
-        tabDiv.eq(thisIndex).addClass('active_box');
+        // .tab_box에 css범위를 할당(해당 순서 확인)        
+        var tabDiv = $('.tab_box');
+        
+        tabDiv.css({marginTop:(-150 * thisIndex ) + 'px'});
         
       });
     })(this.jQuery);
