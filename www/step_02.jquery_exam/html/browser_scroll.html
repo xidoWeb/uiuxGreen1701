@@ -24,7 +24,7 @@
     .view_03{background-color:#7a7;}
     .view_04{background-color:#a3a;}
     .view_05{background-color:#faf;}
-    
+
     .active{background-color: #0ff;}
   </style>
 </head>
@@ -50,15 +50,24 @@
   <script>
     (function($){
       var gnbLi = $('#gnb').find('li');
+      var viewH = $('html,body').height(); //브라우저의 높이값
+      var scrollT = $(window).scrollTop();
+      console.log(scrollT);
 
       gnbLi.on('click', function(evt){
         evt.preventDefault();
-        var $this = $(this).index();
+        var $this = $(this);  //클릭한 것
+        var thisIndex = $this.index();  //클릭한 것의 순서확인
+      //  $(window).scrollTop(thisIndex * viewH);  //순서(번호값) * 브라우저 높이값
 
-        $('#wrap').animate({marginTop:(-100 * $this)+'%'}, 500);
+      $('html, body').animate({scrollTop: thisIndex * viewH},1000,'easeOutBounce');
+
+
 
       });
     })(this.jQuery);
   </script>
 </body>
 </html>
+
+<!--  -->
