@@ -82,11 +82,27 @@
       }
       // 위기능 결론: 어느 브라우저라도 마우스휠을 사용했을때 똑같은 결과값이 me에 작용하도록 처리!!
       
-      $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000, 'easeOutBounce');
-    }       
+      // 마우스휠 위/아래 적용
+      if(me > 0){
+      // 1. 아래로 휠을 내렸을때 화면이동         
+      // $('html body').stop().animate({scrollTop:scrollT -= viewH}, 1000);
+        
+        if(scrollT <= 0){
+        // 1-1: scrollTop높이가 0작으면 무조건 scrollTop은 0
+            $(window).scrollTop(0);
+           }else{
+        // 1-2: 0보다 큰상태일때는 작동(스크롤)!
+            $('html body').stop().animate({scrollTop:scrollT -= viewH}, 1000);
+           }// scroll높이0일경우판단 종료
+        
+         }else{
+      // 2. 위로 휠을 올렸을때 화면이동
+      $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000);
+         }
       
-  // 1. 아래로 휠을 내렸을때 화면이동
-  // 2. 위로 휠을 올렸을때 화면이동
+      
+    }  // mouseWheel(e)     
+      
      console.log($('html,body').height());
     })(this.jQuery);
   </script>
