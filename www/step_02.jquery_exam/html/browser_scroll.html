@@ -39,11 +39,11 @@
         <li><a href="#">05</a></li>
       </ul>
     </nav>
-    <div class="view_01">view_01</div>
-    <div class="view_02">view_02</div>
-    <div class="view_03">view_03</div>
-    <div class="view_04">view_04</div>
-    <div class="view_05">view_05</div>
+    <div class="view_01 view">view_01</div>
+    <div class="view_02 view">view_02</div>
+    <div class="view_03 view">view_03</div>
+    <div class="view_04 view">view_04</div>
+    <div class="view_05 view">view_05</div>
   </div>
 
 
@@ -84,7 +84,7 @@
       
       // 마우스휠 위/아래 적용
       if(me > 0){
-      // 1. 아래로 휠을 내렸을때 화면이동         
+      // 1. 아래로 휠을 올렸을때 화면이동         
       // $('html body').stop().animate({scrollTop:scrollT -= viewH}, 1000);
         
         if(scrollT <= 0){
@@ -96,14 +96,27 @@
            }// scroll높이0일경우판단 종료
         
          }else{
-      // 2. 위로 휠을 올렸을때 화면이동
-      $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000);
-         }
+      // 2. 위로 휠을 내렸을때 화면이동
+      // $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000);
+           
+           var browserFullH = viewH * 4; //브라우저 전체 높이값 계산(5개이기에 '*4' 처리)
+           if(scrollT >= browserFullH){
+           // 2-1: scroll높이를 전체 브라우저의 높이값을 판단해서 처리
+               $(window).scrollTop(browserFullH);
+            }else{
+           // 2-2: 이외의 기능은 기존 계산식을 사용
+             $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000); 
+            }// else   
+         }// 마우스 전체 휠(else)
       
       
     }  // mouseWheel(e)     
       
-     console.log($('html,body').height());
+      
+      
+      // wrap 내부의 div 갯수파악 방법
+      var wrapLength = $('#wrap').children('.view').length; 
+//      console.log( wrapLength );
     })(this.jQuery);
   </script>
 </body>
