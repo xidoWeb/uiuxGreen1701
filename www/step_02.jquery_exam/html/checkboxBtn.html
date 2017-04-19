@@ -11,8 +11,7 @@
     h1{color:#fff; background-color: #07f; text-align: center; 
       padding: 2em; padding-bottom: 1em; border-bottom: 2px solid  #777;}
     #multiCheck{padding: 1em; background-color: #cfcfcf;}
-    form{width: 700px; height: auto; border:3px solid #fd0; padding:0.5em;
-      margin: 0 auto;}
+    form{width:700px; height:auto; padding:0.5em; margin:0 auto;}
     fieldset{width: 100%; height: auto; background-color: #fff;
       border: none; margin: 0; padding:0.5em;
       box-sizing: border-box;}
@@ -23,8 +22,14 @@
     dt{width: 100%; padding: 0.5em; background-color: #fd0; 
     font-weight: bold; box-sizing: border-box;}
     dd{width: 100%; height: auto; padding: 1em; box-sizing: border-box; background-color: #ccc;}
-    input[type="checkbox"]{width:50px; height:50px; 
-      float: right;}
+    input[type="checkbox"]{position:absolute; z-index:-100;}
+    label{width: 100%; height: auto; position: relative; cursor:pointer; display: block;}
+
+    input:checked + label:after{content:"췕"; color:#f06;
+      font-size: 1em; position: absolute;z-index: 100;
+      right: 0; top: 0;}
+
+    input:checked + label{text-decoration:underline;}
   </style>
 </head>
 <body>
@@ -33,18 +38,16 @@
     <form action="" method="post">
       <fieldset>
         <legend>전체 확인</legend>
-        <label for="allCheck">
-          아래내용 숙지 및 전체 선택
-          <input type="checkbox" id="allCheck" >
-        </label>
+        <input type="checkbox" id="allCheck" >
+        <label for="allCheck">아래내용 숙지 및 전체 선택</label>
       </fieldset>
       
       <fieldset>
         <legend>부분 확인 및 체크</legend>
         <dl>
           <dt>
-            <label for="one">부분확인_01</label>
             <input type="checkbox" name="particle" id="one">
+            <label for="one">부분확인_01</label>
           </dt>
           <dd>
           내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, adipisci.
@@ -52,8 +55,8 @@
         </dl>
         <dl>
           <dt>
-            <label for="two">부분확인_02</label>
             <input type="checkbox" name="particle" id="two">
+            <label for="two">부분확인_02</label>
           </dt>
           <dd>
           내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque officiis vel fugit illo voluptates quis debitis ut laudantium minus architecto!
@@ -61,8 +64,8 @@
         </dl>
         <dl>
           <dt>
-            <label for="the">부분확인_03</label>
             <input type="checkbox" name="particle" id="the">
+            <label for="the">부분확인_03</label>
           </dt>
           <dd>
           내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt pariatur atque suscipit repellendus nobis minus doloremque at repellat dicta, sit numquam, obcaecati vitae hic, quam iure ipsam consectetur. Aut.
@@ -70,8 +73,8 @@
         </dl>
         <dl>
           <dt>
+            <input type="checkbox" name="particle" id="four" >
             <label for="four">부분확인_04</label>
-            <input type="checkbox" name="particle" id="four">
           </dt>
           <dd>
           내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam vero neque vel optio excepturi aliquid odit, ea explicabo itaque tempora! Provident commodi aut voluptates ad veritatis temporibus nobis iure, possimus harum minus eveniet deserunt sit maxime in consequatur animi voluptate enim velit molestiae dignissimos. Aperiam ex accusamus atque, ipsam officia?
@@ -87,8 +90,22 @@
 <!-- jquery -->
   <script>
     (function($){
+      var allCheck = $('#allCheck');// 변수처리
+      var particle =  $('input[name="particle"]');// 변수처리
+      
+      // 전체 확인나오게하는 버튼 클릭
+      allCheck.on('click', ckbox);
       
       
+      function ckbox(){  
+      var ck = allCheck.attr('checked');//상태확인용
+      if(ck){// 체크상태라면?
+        $('input').attr({'checked':false}); //체크지워라
+      }else{ // 체크상태아니라면?
+        $('input').attr({checked:true}); //체크해라
+      }
+       
+      };
     })(this.jQuery);
   </script>
 </body>
