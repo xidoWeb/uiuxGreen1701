@@ -96,7 +96,11 @@
             $(window).scrollTop(0);
            }else{
         // 1-2: 0보다 큰상태일때는 작동(스크롤)!
-            $('html, body').stop().animate({scrollTop:scrollT -= viewH}, 1000, function(){d = false});
+            $('html, body')
+              .stop()
+              .animate({scrollTop:scrollT -= viewH}, 
+                       1000, 
+                       function(){d = false});
            }// scroll높이0일경우판단 종료
           
         
@@ -111,7 +115,7 @@
                $(window).scrollTop(browserFullH);
             }else{
            // 2-2: 이외의 기능은 기존 계산식을 사용
-             $('html, body').stop().animate({scrollTop:scrollT += viewH}, 1000,function(){d= false}) ;
+             $('html, body').stop().animate({scrollTop:scrollT += viewH}, 1000,function(){d= false});
               
               
             }// else  

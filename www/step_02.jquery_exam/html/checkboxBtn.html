@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>checkbox button</title>
+  <style>
+    h1{color:#fff; background-color: #07f; text-align: center; 
+      padding: 2em; padding-bottom: 1em; border-bottom: 2px solid  #777;}
+    #multiCheck{padding: 1em; background-color: #cfcfcf;}
+    form{width: 700px; height: auto; border:3px solid #fd0; padding:0.5em;
+      margin: 0 auto;}
+    fieldset{width: 100%; height: auto; background-color: #fff;
+      border: none; margin: 0; padding:0.5em;
+      box-sizing: border-box;}
+    fieldset:first-child{border-bottom:2px solid #fd0; margin-bottom: 0.3em;font-size: 2em;font-weight: bold;}
+    
+    fieldset>legend{font-size: 0;}
+    dl{width: 100%; height: auto; margin-bottom: 1em;}
+    dt{width: 100%; padding: 0.5em; background-color: #fd0; 
+    font-weight: bold; box-sizing: border-box;}
+    dd{width: 100%; height: auto; padding: 1em; box-sizing: border-box; background-color: #ccc;}
+    input[type="checkbox"]{width:50px; height:50px; 
+      float: right;}
+  </style>
+</head>
+<body>
+  <h1>jQuery multi checkbox</h1>
+  <div id="multiCheck">
+    <form action="" method="post">
+      <fieldset>
+        <legend>전체 확인</legend>
+        <label for="allCheck">
+          아래내용 숙지 및 전체 선택
+          <input type="checkbox" id="allCheck" >
+        </label>
+      </fieldset>
+      
+      <fieldset>
+        <legend>부분 확인 및 체크</legend>
+        <dl>
+          <dt>
+            <label for="one">부분확인_01</label>
+            <input type="checkbox" name="particle" id="one">
+          </dt>
+          <dd>
+          내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, adipisci.
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <label for="two">부분확인_02</label>
+            <input type="checkbox" name="particle" id="two">
+          </dt>
+          <dd>
+          내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque officiis vel fugit illo voluptates quis debitis ut laudantium minus architecto!
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <label for="the">부분확인_03</label>
+            <input type="checkbox" name="particle" id="the">
+          </dt>
+          <dd>
+          내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt pariatur atque suscipit repellendus nobis minus doloremque at repellat dicta, sit numquam, obcaecati vitae hic, quam iure ipsam consectetur. Aut.
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <label for="four">부분확인_04</label>
+            <input type="checkbox" name="particle" id="four">
+          </dt>
+          <dd>
+          내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam vero neque vel optio excepturi aliquid odit, ea explicabo itaque tempora! Provident commodi aut voluptates ad veritatis temporibus nobis iure, possimus harum minus eveniet deserunt sit maxime in consequatur animi voluptate enim velit molestiae dignissimos. Aperiam ex accusamus atque, ipsam officia?
+          </dd>
+        </dl>
+        
+      </fieldset>      
+    </form>
+  </div>
+  
+  
+  
+<!-- jquery -->
+  <script>
+    (function($){
+      
+      
+    })(this.jQuery);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!---->
