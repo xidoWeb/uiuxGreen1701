@@ -63,6 +63,9 @@
     }); // gnbLi.onclick 
       
   // 마우스 휠을 사용(크로스 브라우징 처리, 함수(mouseWheel)를 호출)
+      
+      var d = false;  // 임의의 기능 취소처리
+      
     $('body').on('mousewheel DOMMouseScroll', mouseWheel);
       
     function mouseWheel(e){
@@ -83,7 +86,8 @@
       // 위기능 결론: 어느 브라우저라도 마우스휠을 사용했을때 똑같은 결과값이 me에 작용하도록 처리!!
       
       // 마우스휠 위/아래 적용
-      if(me > 0){
+      if(me >= 0 && !d){
+        d = true;
       // 1. 아래로 휠을 올렸을때 화면이동         
       // $('html body').stop().animate({scrollTop:scrollT -= viewH}, 1000);
         
@@ -92,10 +96,12 @@
             $(window).scrollTop(0);
            }else{
         // 1-2: 0보다 큰상태일때는 작동(스크롤)!
-            $('html body').stop().animate({scrollTop:scrollT -= viewH}, 1000);
+            $('html, body').stop().animate({scrollTop:scrollT -= viewH}, 1000, function(){d = false});
            }// scroll높이0일경우판단 종료
+          
         
-         }else{
+         }else if(me < 0 && !d){
+           d = true;
       // 2. 위로 휠을 내렸을때 화면이동
       // $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000);
            
@@ -105,10 +111,13 @@
                $(window).scrollTop(browserFullH);
             }else{
            // 2-2: 이외의 기능은 기존 계산식을 사용
-             $('html body').stop().animate({scrollTop:scrollT += viewH}, 1000); 
-            }// else   
+             $('html, body').stop().animate({scrollTop:scrollT += viewH}, 1000,function(){d= false}) ;
+              
+              
+            }// else  
+           
          }// 마우스 전체 휠(else)
-      
+       
       
     }  // mouseWheel(e)     
       
