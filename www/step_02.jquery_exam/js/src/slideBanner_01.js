@@ -53,22 +53,28 @@
   var auto = function(){
     play = setInterval(rotateAni, timed*2);
   }
+  // 최초의 동작처리
  auto();
-  
-  // 배너위에 마우스가 올라가면 슬라이드 배너는 일시정지
-  // clearInterval();
-  banner.on('mouseenter',function(){
+  // clearInterval 함수처리
+  var clear = function(){
     clearInterval(play);
-//    play=null;
-    console.log('on');
-  });
-  
-  // 다시 배너를 벗어나면 슬라이드 배너는 재생
-  // setInterval();
-  banner.on('mouseleave',function(){
-     auto();
-  });
-  
+  }    
+/*  
+//  // 배너위에 마우스가 올라가면 슬라이드 배너는 일시정지
+//  // clearInterval();
+//  banner.on('mouseenter',function(){
+//    clearInterval(play);
+////    play=null;
+//    console.log('on');
+//  });
+//  
+//  // 다시 배너를 벗어나면 슬라이드 배너는 재생
+//  // setInterval();
+//  banner.on('mouseleave',function(){
+//     auto();
+//  });
+*/  
+  banner.on({mouseenter:clear, mouseleave:auto});
   
 })(this.jQuery);
 
