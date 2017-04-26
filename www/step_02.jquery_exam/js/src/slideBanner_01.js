@@ -48,20 +48,26 @@
   // ------------------------------------------------
   // 일정 시간마다 화면이 움직이는것!
   // setInterval();
+  var play;
+  // play = setInterval(rotateAni, timed*2);
   var auto = function(){
-    setInterval(rotateAni, timed*2);
+    play = setInterval(rotateAni, timed*2);
   }
  auto();
   
   // 배너위에 마우스가 올라가면 슬라이드 배너는 일시정지
   // clearInterval();
   banner.on('mouseenter',function(){
-    
+    clearInterval(play);
+//    play=null;
+    console.log('on');
   });
   
   // 다시 배너를 벗어나면 슬라이드 배너는 재생
   // setInterval();
-  
+  banner.on('mouseleave',function(){
+     auto();
+  });
   
   
 })(this.jQuery);
