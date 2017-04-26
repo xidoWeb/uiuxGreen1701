@@ -1,0 +1,33 @@
+/* slideBanner_01.css */
+h1{background-color:#f0a; font-size:3em; color:#fff; padding:0.5em;}
+
+#adBanner{width:800px; height:500px; margin:0 auto; 
+  border:3px solid #ccc;  position: relative;}
+.btn{width:100%; height:0; position: absolute; top: 50%; left: 0;
+  margin-top:-4em;}
+.btn>button{width:3em; height:8em; background-color:transparent;
+  font-size:1.3em; color:#f0a; float: left;}
+button:hover{background-color:#f0a; color:#fff;}
+button:last-of-type{float: right;}
+.banner_box{width: 100%; height: 100%; background-color: #cfcfcf;}
+.banner_box>ul{width:600%; height:100%;}
+.banner_box>ul>li{
+  width:-webkit-calc(100% / 6); 
+  width:-moz-calc(100% / 6); 
+  width:-ms-calc(100% / 6); 
+  width:-o-calc(100% / 6); 
+  width:calc(100% / 6);   
+  height: 100%; color:#fff; font-size:3em; text-align: center;
+  line-height:500px; background-color:#0cf;  float: left;}
+.banner_box>ul>li:nth-child(2n){background-color:#f94;}
+
+
+
+
+
+
+
+
+
+
+
