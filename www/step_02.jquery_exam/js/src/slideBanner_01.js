@@ -45,6 +45,24 @@
   
   // rbtn 클릭시 작동하는 내용처리
   rbtn.on('click', rotateAni); // rbtn.on(click)
+  // ------------------------------------------------
+  // 일정 시간마다 화면이 움직이는것!
+  // setInterval();
+  var auto = function(){
+    setInterval(rotateAni, timed*2);
+  }
+ auto();
+  
+  // 배너위에 마우스가 올라가면 슬라이드 배너는 일시정지
+  // clearInterval();
+  banner.on('mouseenter',function(){
+    
+  });
+  
+  // 다시 배너를 벗어나면 슬라이드 배너는 재생
+  // setInterval();
+  
+  
   
 })(this.jQuery);
 
