@@ -30,8 +30,9 @@
       bannerBox.css({marginLeft:-100 + '%'});
     });
   }); // lbtn.on(click)
-  // rbtn 클릭시 작동하는 내용처리
-  rbtn.on('click', function(){
+  
+  // rbtn을 클릭했을경우의 함수기능을 변수로 처리해서 먼저 작업
+  var rotateAni = function(){
     // li순서가 변경되어있기 때문에 마지막을 재정리해서 liLast에 저장
     var lifirst = bannerUl.find('li').first();
     // 애니메이션 처리
@@ -40,9 +41,10 @@
       bannerUl.append(lifirst);
       bannerBox.css({marginLeft:-100 + '%'});
     });
-  }); // lbtn.on(click)
+  } // rotateAni
   
-  
+  // rbtn 클릭시 작동하는 내용처리
+  rbtn.on('click', rotateAni); // rbtn.on(click)
   
 })(this.jQuery);
 
