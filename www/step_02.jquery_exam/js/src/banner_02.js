@@ -83,8 +83,27 @@
     $this.addClass('active',timed/3);
   });
   
+  // ----------------------------------------
+  // 좌우 버튼 변수설정
+  var lbtn = $('.btn').children('span').first();
+  var rbtn = $('.btn').children('span').last();
   
-  
+  //왼쪽 버튼 클릭
+  lbtn.on('click', function(){
+    // 현재 bannerUl의 마진값을 확인
+    var bannerMargin = bannerUl.css('marginLeft');
+    // banner margin 값을 정수로 변환(+-모두 가져올 수 있음)
+    var ml = parseInt(bannerMargin);
+    console.log(ml);
+    
+    
+    if(ml >= 0){
+      
+    }else{
+      
+    bannerUl.animate({marginLeft:ml+800+'px'});
+    }
+  });
   
   
   
