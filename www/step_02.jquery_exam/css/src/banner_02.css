@@ -26,7 +26,7 @@ hgroup>h2{color:#fcfcfc; font-size: 1.2em;}
 .btn_indi>.indi{width:200px; height: 100%; float: right;}
 .btn_indi>.indi>li{width: 20px; height: 100%; margin-right:7px; 
   background-color: #556; border-radius:20px; float: left;}
-.btn_indi>.indi>li:last-child{margin-right: 0;}
+.btn_indi>.indi>li:last-child{margin-right: 0; background-color:#961;}
 
 /* jquery에서 사용할 class작성 */
 .btn_indi>.indi>li.active{width:40px; background-color:#f06;}
