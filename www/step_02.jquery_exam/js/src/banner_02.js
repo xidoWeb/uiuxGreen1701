@@ -14,11 +14,15 @@
   
   // 변수 할당
   var adBanner = $('#adBanner'),
+      adBannerWidth = adBanner.width(),
       bannerUl = adBanner.find('.banner_box').children('ul'),
+      firstUlWidth = bannerUl.width(),
       bannerLi = bannerUl.children('li'),
       lastAd   = bannerLi.last(),
       indiUl   = adBanner.find('.indi'),
-      lastInd  = indiUl.children('li').last(),
+      indiLi   = indiUl.children('li'),
+      lastInd  = indiLi.last(),
+      firstInd = indiLi.first(),
       timed    = 1000;
   
   // 마지막 배너를 복제해서 사용하고 크기를 수정하면 전체가 틀어질 수 있으므로 미리
@@ -100,16 +104,62 @@
 // bannerUl 값을 오른쪽으로 배너하나의 크기만큼 이동
       bannerUl.stop().animate({marginLeft:ml+800+'px'}, function(){
       // 이동후 조건에서 bannerUl marginLeft값이 -800이면 마지막으로 이동
-      // marginLeft의 값을 재확인
+      // marginLeft의 값을 재확인(재할당해야 변경된 값을 알 수 있다.)
       bannerMargin = bannerUl.css('marginLeft');
       ml = parseInt(bannerMargin);
+        
         //marginLeft 0의 값에 도달하면 마지막 위치로 이동
         if(ml >= 0){
            bannerUl.css({marginLeft:(-100 * (adlength -1 )) +'%'});
            }
       });
-   
+    
+   // 인디케이트 포커스 처리
+    
+    var indiIndex = -ml/adBannerWidth-1;
+    indiLi.removeClass('active');
+    if(indiIndex == 0){
+      indiIndex = adlength-1;
+    }
+    indiLi.eq(indiIndex).addClass('active');
+ console.log(indiIndex);
+    
   });
+  // ----------------------------------------------------
+  // 오른쪽 버튼 클릭
+  rbtn.on('click', function(){
+    // 현재 bannerUl의 마진값을 확인
+    var bannerMargin = bannerUl.css('marginLeft');
+    // banner margin 값을 정수로 변환(+-모두 가져올 수 있음)
+    var ml = parseInt(bannerMargin);
+      // console.log(ml);
+      // marginLeft 0의 값에 도달하면 마지막 위치로 이동
+      bannerUl.stop().animate({marginLeft:ml-800+'px'},function(){
+        bannerMargin = bannerUl.css('marginLeft');
+        ml = parseInt(bannerMargin);
+        
+        if(ml <= -firstUlWidth){
+          bannerUl.css({marginLeft:0});
+          }                
+        });
+        
+    
+    //adBanner, bannerMargin, ml
+    var indiIndex = -ml/adBannerWidth+1;
+    indiLi.removeClass('active');
+    indiLi.eq(indiIndex).addClass('active');
+ 
+    
+      });// rbtn
+    
+    
+    
+   // ------------
+   // 인디케이트 설정
+   // 첫번째 인디케이트 활성화
+  firstInd.addClass('active');
+  //
+
   
   
   
