@@ -78,9 +78,9 @@
    // console.log(num); // 순서 확인 검증
     
   // 해당순서의 배너가 화면에 위치하도록 처리(margin-left)
-    bannerUl.animate({marginLeft:-100 * num +'%'}, timed);
+    bannerUl.stop().animate({marginLeft:-100 * num +'%'}, timed);
     indiLi.removeClass('active');
-    $this.addClass('active',timed/3);
+    $this.addClass('active');
   });
   
   // ----------------------------------------
@@ -94,15 +94,21 @@
     var bannerMargin = bannerUl.css('marginLeft');
     // banner margin 값을 정수로 변환(+-모두 가져올 수 있음)
     var ml = parseInt(bannerMargin);
-    console.log(ml);
+//    console.log(ml);
     
     
-    if(ml >= 0){
-      
-    }else{
-      
-    bannerUl.animate({marginLeft:ml+800+'px'});
-    }
+// bannerUl 값을 오른쪽으로 배너하나의 크기만큼 이동
+      bannerUl.stop().animate({marginLeft:ml+800+'px'}, function(){
+      // 이동후 조건에서 bannerUl marginLeft값이 -800이면 마지막으로 이동
+      // marginLeft의 값을 재확인
+      bannerMargin = bannerUl.css('marginLeft');
+      ml = parseInt(bannerMargin);
+        //marginLeft 0의 값에 도달하면 마지막 위치로 이동
+        if(ml >= 0){
+           bannerUl.css({marginLeft:(-100 * (adlength -1 )) +'%'});
+           }
+      });
+   
   });
   
   
