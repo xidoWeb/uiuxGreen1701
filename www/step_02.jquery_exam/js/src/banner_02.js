@@ -25,6 +25,8 @@
       firstInd = indiLi.first(),
       timed    = 1000;
   
+  
+  
   // 마지막 배너를 복제해서 사용하고 크기를 수정하면 전체가 틀어질 수 있으므로 미리
   // 각 배너 하나의 크기 li를 재설정 하기위해 기존 값 가져오기
   var adWidth = lastAd.width();
@@ -114,8 +116,7 @@
            }
       });
     
-   // 인디케이트 포커스 처리
-    
+   // 인디케이트 포커스 처리 
     var indiIndex = -ml/adBannerWidth-1;
     indiLi.removeClass('active');
     if(indiIndex == 0){
@@ -142,30 +143,17 @@
           bannerUl.css({marginLeft:0});
           }                
         });
-        
-    
+            
     //adBanner, bannerMargin, ml
     var indiIndex = -ml/adBannerWidth+1;
     indiLi.removeClass('active');
     indiLi.eq(indiIndex).addClass('active');
- 
-    
-      });// rbtn
-    
-    
-    
+    });// rbtn
+  
    // ------------
    // 인디케이트 설정
    // 첫번째 인디케이트 활성화
   firstInd.addClass('active');
-  //
-
   
-  
-  
-  
-  
-  
-  
-  
+   adBanner.css({overflow:'hidden'});
  }(this.jQuery));

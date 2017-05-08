@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>Document</title>
+  <style>
+    h1{padding: 0.3em; background-color: #04f; color:#fff; font-size: 2em;}
+    
+    #mouseBox{width: 800px; height: 500px; margin: 0 auto; background-color: #ccc; position: relative;}
+    #mouseBox>div{position: absolute; font-size:5em;
+      top: 50%; left: 50%;text-align: center; }
+    .one{width:150px; height:250px; color:#fff; background-color:rgba(0,0,0,0.3); margin-left:-75px; z-index: 400;}
+    
+    .two{width:100px; height:70px; color:#359;  background-color:rgba(200,200,200,0.5); margin-left: -50px;
+      z-index: 100;}
+    
+    .three{width:200px; height:150px; color:#0af; background-color:rgba(100,58,90,0.3); margin-left: -100px;}
+    
+  </style>
+</head>
+<body>
+<h1>page-X or page-Y 의 기능을 알아봅시다!!</h1>
+
+<div id="mouseBox">
+  <div class="one">one</div>
+  <div class="two">two</div>
+  <div class="three">three</div>
+</div>
+
+
+<!--  jquery -->
+  <script src="../js/src/pagexy.js"></script>
+</body>
+</html>
+
+
+
+

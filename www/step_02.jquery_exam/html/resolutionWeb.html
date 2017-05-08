@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bin/reset.css">
+  <link rel="stylesheet" href="../css/bin/base.css">
+  <title>resolution Web</title>
+  <style>
+    h1{padding: 1em; text-align: center; 
+      background-color: #0af; color:#fff;}
+    h2{padding: 0.3em; text-align: center;background-color: #09a; color:#fff; border-bottom: 1px solid  #ddd;}
+    .img_insert{width:51px; height:66px; margin: auto; 
+      border:1px solid #999;}
+    img{width:100%; height:auto;}
+    
+    .media_img{width: 51px; height: 66px; border:1px solid  #999; 
+      margin: 0 auto; background-repeat:no-repeat;
+      background-position:center; 
+      -webkit-background-size:100%;
+      background-size:100%;
+      background-image:url("../image/resolution/icon-8.png");
+    }
+    .media_img>span{text-indent:-9999em; display: block; width: 0; height: 0; overflow: hidden;}
+    
+    @media screen and (min-resolution:1.5dppx){
+      .media_img{background-image:url("../image/resolution/icon@2x.png");}
+    }
+    @media screen and (min-resolution:3dppx){
+      .media_img{background-image:url("../image/resolution/icon@3x.png");}
+    }
+     @media screen and (min-resolution:4dppx){
+      .media_img{background-image:url("../image/resolution/icon@4x.png");}
+    }
+    
+    .bg_box{width: 51px; height: 66px; border:1px solid  #999; 
+      margin: 0 auto; background-repeat:no-repeat;
+      background-position:center; -webkit-background-size:100%;
+      background-size:100%;
+      background-image:url("../image/resolution/icon-8.png");
+      background-image:-webkit-image-set(
+        url("../image/resolution/icon-8.png") 1.5x,
+        url("../image/resolution/icon@2x.png") 2x,
+        url("../image/resolution/icon@3x.png") 3x,
+        url("../image/resolution/icon@4x.png") 4x
+        );
+      background-image:image-set(
+        url("../image/resolution/icon-8.png") 1.5x,
+        url("../image/resolution/icon@2x.png") 2x,
+        url("../image/resolution/icon@3x.png") 3x,
+        url("../image/resolution/icon@4x.png") 4x
+        );  
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>해상도에 따른 이미지 선명하게 보이게 만들기</h1>
+  <h2>1. body에 img코드로 구현</h2>
+    <div class="img_insert">
+      <img 
+      src="../image/resolution/icon.png" 
+      srcset="../image/resolution/icon.png 1x,
+              ../image/resolution/icon@2x.png 2x,
+              ../image/resolution/icon@3x.png 3x,
+              ../image/resolution/icon@4x.png 4x"
+      alt="구름낀 날씨">
+    </div>
+  
+  <h2>2. css로 @media query를 사용</h2>
+  <div class="media_img">
+    <span>미디어 쿼리를 사용한 이미지</span>
+  </div>
+  <h2>3. css로 background-image를 사용</h2>
+  <div class="bg_box">
+  
+  </div>
+  
+</body>
+</html>
+
+
+
+
+
+
