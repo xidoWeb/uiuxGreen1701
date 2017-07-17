@@ -1,0 +1,9 @@
+/* main.css */
+ 
+@import url("./app/headBox.css");
+@import url("./app/main_addBanner.css");
+@import url("./app/main_content.css");
+@import url("./app/footBox.css");
+
+/* #wrap ----------------------------------------------*/
+#wrap{width:960px; height:auto; margin: 0 auto;}
